@@ -1,0 +1,11 @@
+<div ng-class="{widget:true,innerAll: model.data.border}">
+    <a href="#" class="display-block {{model.data.background}} innerAll text-center {{model.data.textcolor}}"><i class="{{model.data.icon}} fa-5x"></i>
+    </a>
+    <div class="text-center innerAll">
+        <a href="{{model.data.href}}" class="strong  ">{{model.data.text|translate}}</a>
+        <div class="clearfix"></div>
+    </div>
+    <div ng-if="model.data.ribbon" class="ribbon-wrapper">
+        <div class="ribbon {{model.data.ribbonColor}}   ">{{model.data.ribbon|translate}}</div>
+    </div>
+</div>

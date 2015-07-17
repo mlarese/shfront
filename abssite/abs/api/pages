@@ -1,0 +1,25 @@
+{
+   "dashboard_default":{
+        "code":"dashboard_default",
+        "template":"dashboard",
+        "structure":{
+            "title":"default dashboard"
+        },
+        "widgets":[
+            {"code":"avgrevbook","width":"small","position":"1"},
+            {"code":"totrevxpaxseg","width":"large","position":"3"}
+        ]
+   },
+
+   "dashboard_revenue":{
+       "code":"dashboard_revenue",
+       "template":"dashboard",
+       "structure":{
+           "title":"revenue dashboard"
+       },
+       "widgets":[
+           {"code":"avgrevbook","width":"small","position":"1"},
+           {"code":"totrevxpaxseg","width":"large","position":"3"}
+       ]
+    }
+}

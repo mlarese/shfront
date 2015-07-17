@@ -1,0 +1,29 @@
+<li class="hasSubmenu" ng-if="auth.user.structures.length>1">
+
+    <a href="#sidebar-collapse-structures" data-toggle="collapse" class="glyphicons google_maps">
+        <span class="badge pull-right badge-primary hidden-md">{{auth.user.structures.length}}</span>
+        <i></i><span>{{'structures'|translate}}</span>
+    </a>
+
+    <ul id="sidebar-collapse-structures" class="collapse">
+        <li>
+            <div style="margin: 6px 6px 0 6px;" class="input-group input-group-sm">
+                <input type="text" ng-model="searchStructure" class="form-control" placeholder="{{'Search structure'|translate}}">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="searchStructure=''" ng-disabled="searchStructure==''" >
+                        <i class="fa icon-circle-delete"></i>
+                    </button>
+                </div>
+
+            </div>
+        </li>
+
+        <li
+                ng-class='{active:isCurrentStructure(struct.id)}'
+                ng-repeat="struct in auth.user.structures | filter:searchStructure | orderBy:'description'  "
+                ng-click="setActiveStructure(struct.id)" >
+            <a href="javascript:void(0)"><i class="fa fa-rss"></i><span>{{struct.description}}</span></a>
+        </li>
+    </ul>
+
+</li>

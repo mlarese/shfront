@@ -1,0 +1,76 @@
+{
+    "stacked_bars":{
+        "bars": {
+            "barWidth": 0.8,
+            "align": "center",
+            "show": true,
+            "fill": 1,
+            "shadowSize": 0,
+            "lineWidth": 1,
+            "order": 1
+        },
+        "colors": ["#4D70B8", "#666666", "#cccccc", "green", "fuchsia", "aqua"],
+        "series": {
+            "shadowSize": 0
+        },
+        "xaxis": {
+            "font": {
+                "color": "#aaa"
+            },
+            "autoscaleMargin": 0.1
+        },
+        "yaxis": {
+            "font": {
+                "color": "#ccc"
+            }
+        },
+        "legend": {
+            "show": false
+        },
+        "grid": {
+            "hoverable": false,
+            "clickable": false,
+            "borderWidth": 0,
+            "color": "#ccc"
+        },
+        "tooltip": true
+    },
+    "sided_bars":{
+        "bars": {
+            "barWidth": 0.8,
+            "align": "center",
+            "show": true,
+            "fill": 1,
+            "shadowSize": 0,
+            "lineWidth": 1,
+            "order": 1
+        },
+        "colors": ["#4D70B8", "#666666", "#cccccc", "green", "fuchsia", "aqua"],
+        "series":{
+            "shadowSize": 0,
+            "bars": { "fill":1, "order": 1 ,"show": true,   "barWidth": 0.8,  "align":"center"   }
+         } ,
+        "xaxis": {
+            "font": {
+                "color": "#aaa"
+            },
+            "autoscaleMargin": 0.1
+        },
+        "yaxis": {
+            "font": {
+                "color": "#ccc"
+            }
+        },
+        "legend": {
+            "show": false
+        },
+        "grid": {
+            "hoverable": false,
+            "clickable": false,
+            "borderWidth": 0,
+            "color": "#ccc"
+        },
+        "tooltip": true
+    }
+
+}

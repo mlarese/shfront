@@ -1,0 +1,17 @@
+<div class="widget  padding-none">
+    <div class="widget-body padding-none">
+        <h4 class="innerAll {{model.data.background}} text-white margin-none" ng-if="model.data.title">
+            <span ng-if="model.data.badge && model.data.badge>0 " class="badge pull-right bg-primary ">{{model.data.badge}}</span>
+            <i ng-if="model.data.titleIcon" class="fa {{model.data.titleIcon}} fa-fw"></i> {{model.data.title}}
+        </h4>
+        <ul class="list-group list-group-1 margin-none borders-none">
+            <li ng-repeat="item in model.data.items" ng-class="{'list-group-item' : true, 'border-top-none':false,'active':item.active}">
+                <a ng-href="{{item.href}}">
+                    <span  ng-if="item.badge && item.badge>0 " class="badge pull-right bg-primary ">{{item.badge}}</span>
+                    <i class="fa {{item.icon}}"></i>&nbsp;
+                    {{item.title}}</a>
+            </li>
+
+        </ul>
+    </div>
+</div>

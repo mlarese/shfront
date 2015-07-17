@@ -1,0 +1,51 @@
+{
+   "dashboard":{
+      "favorites":{
+         "center":[
+
+         ],
+         "left":[
+
+         ],
+         "right":[
+
+         ]
+      },
+      "revenue":{
+         "center":[
+
+         ],
+         "left":[
+            {"id":"avgrevbook","width":"medium","position":"1"},
+            {"id":"adrbook","width":"medium","position":"2"},
+            {"id":"totrevxpaxseg","width":"full","position":"3"},
+            {"id":"totrevxresmon3ys","width":"full","position":"4"}
+         ],
+         "right":[
+
+         ]
+      }
+   },
+   "homepage":{
+      "default":{
+         "center":[
+
+         ],
+         "left":[
+
+         ],
+         "right":[
+
+         ]
+      }
+   },
+   "quickreport":{
+      "default":{
+         "center":[  ],
+         "left":[  ],
+         "right":[
+
+         ]
+      }
+   }
+}

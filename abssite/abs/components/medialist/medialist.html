@@ -1,0 +1,14 @@
+<div ng-repeat="widget in model.data.items">
+    <div class="widget media margin-none " >
+        <a ng-href="{{widget.href}}" class="pull-left {{widget.background}} innerAll text-center {{widget.textcolor}}">
+            <i class="fa fa-fw {{widget.icon}} fa-5x"></i>
+        </a>
+        <div class="media-body innerAll">
+            <h4 class="media-heading innerT"><a class="text-inverse" ng-href="{{widget.href}}">{{widget.title|translate}}</a>
+                <small ng-if="widget.subTitle"><i class="fa fa-fw {{widget.subIcon}}"></i> {{widget.subTitle|translate}}</small>
+            </h4>
+            {{widget.text|translate}}
+        </div>
+    </div>
+    <div ng-if="!$last && model.data.separator" class="separator bottom"></div>
+</div>

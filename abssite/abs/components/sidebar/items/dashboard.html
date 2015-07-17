@@ -1,0 +1,15 @@
+<li class="hasSubmenu">
+    <a href="#sidebar-collapse-graph" data-toggle="collapse" class="glyphicons adjust_alt">
+        <i></i><span>{{'dashboard'|translate}}</span>
+    </a>
+    <ul id="sidebar-collapse-graph" class="collapse">
+        <li
+            ng-class={active:item.id==sidebar.sections['chartpage'].active&&sidebar.isCurrentPage('chartpage')}
+            ng-repeat="item in sidebar.sections['chartpage'].list"
+            ng-click="sidebar.setActiveDashboardItem(item.id)" >
+
+
+            <a href="#/chart"><i class="fa fa-bar-chart-o"></i><span> {{item.id|translate }}</span></a>
+        </li>
+    </ul>
+</li>

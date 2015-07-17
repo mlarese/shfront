@@ -1,0 +1,38 @@
+<div class="panel no-border">
+    <div class="panel-heading bg-primary lt">
+        <div class="m-sm" style="min-height:15px">
+            <span class="pull-right"><i class="fa fa-money   text-lg"></i></span>
+            <span class="h4 text-white">{{widget.title|translate |capitalize:false}}</span>
+            <div class="h5 text-white">{{widget.subTitle|translate }}</div>
+        </div>
+
+    </div>
+
+    <div class="hbox bg-primary bg">
+        <div class="col wrapper">
+            <span>{{'today'|translate|capitalize}}</span>
+            <div class="h2 text-info font-thin">{{widget.values.todayValue|number}}</div>
+        </div>
+        <div class="col wrapper bg-info">
+            <span>{{'yesterday'|translate|capitalize}}</span>
+            <div class="h2 text-warning font-thin">{{widget.values.yesterdayValue|number}}</div>
+        </div>
+    </div>
+
+    <div class=" bg-light lter ">
+        <div class="hbox text-center  b-light b-b">
+            <div class="col padder-v text-muted b-r b-l b-light" >
+                <div class="h5">{{widget.values.days30Value|number}}</div>
+                <span>30 {{'days'|translate}}</span>
+            </div>
+            <div class="col padder-v text-muted b-r"  >
+                <div class="h5">{{widget.values.months12Value|number}}</div>
+                <span>12 {{'months'|translate}}</span>
+            </div>
+            <div class="col padder-v text-muted b-r" >
+                <div class="h5">{{widget.values.months24Value|number}}</div>
+                <span>24 {{'months'|translate}}</span>
+            </div>
+        </div>
+    </div>
+</div>

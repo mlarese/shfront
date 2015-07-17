@@ -1,0 +1,15 @@
+<div class="innerLR" ng-controller="DashboardCtrl" >
+    <div style="padding-top: 10px">
+        <div class="row">
+            <!--------------------------------------------------------
+                    Left column
+            --------------------------------------------------------->
+            <div class="col-md-{{app.pages.dashboard.leftColumns}}"  >
+                <div  ng-repeat="widget in app.pages.dashboard.widgets" class="col-md-{{facilities.sizeToColumns(widget.width)}}"   >
+                    <div ng-widget ng-name="{{widget.code}}" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,6 @@
+<div id="logo">
+    <a ng-repeat="btn in auth.toolBar" href="{{btn.href}}" class="btn btn-sm btn-inverse">
+        <i class="fa fa-fw {{btn.icon}}"></i>
+        <span ng-if="btn.badge" class="badge pull-right badge-primary">{{btn.badge}}</span>
+    </a>
+</div>

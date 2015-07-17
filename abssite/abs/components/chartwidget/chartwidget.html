@@ -1,0 +1,35 @@
+<div class="panel panel-default">
+    <div class="panel-heading font-bold">{{model.data.title|translate}}</div>
+    <div class="panel-body">
+        <div    chart
+                style="height: 240px; width:100%;padding: 0px; position: relative;"
+                ng-model='model.data.data'
+                ng-options='model.data.options'
+                > </div>
+        <div ng-chart  chart-name="{{model.data.id}}" />
+        <div id="{{model.data.id}}-table" class="chart-table {{model.data.id}}-chart-element" style="padding-right:7px">
+
+            <table class="dynamicTable scrollVertical table table-primary dataTable" style="margin-right:7px;">
+                <thead>
+                <tr role="row">
+                    <th style="width:80px;"></th>
+                    <th style="width:{{100/(model.data.data.labels.length+1)}}%;"  ng-repeat="lbl in model.data.data.labels">{{lbl[1]|translate}}</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr role="row"  ng-repeat="serie in model.data.data.series">
+                    <td  style="text-align:left" nowrap="nowrap">
+                        <div style="margin-right:5px;float:left;height:12px;width:12px;background:{{model.data.colors[$index]}}">
+                        </div>
+                        {{serie.label}}
+                    </td>
+                    <td ng-repeat="item in serie.data">{{item[1]| number:0}} {{model.data.unit}}</td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

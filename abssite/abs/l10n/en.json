@@ -1,0 +1,7 @@
+{
+    daterange:{
+        'Sun':'Sunday',
+        daysOfWeek: ['Sun', 'Mon', 'Tue', 'Wen', 'Thu', 'Fri','Sat'],
+        monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    }
+}

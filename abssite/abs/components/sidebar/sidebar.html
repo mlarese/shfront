@@ -1,0 +1,17 @@
+<div id="menu" class="hidden-print hidden-xs  sidebar-white">
+    <div id="sidebar-collapse-wrapper">
+        <div id="brandWrapper" >
+            <div>{{'Structure'|translate}}</div>
+            <div class="structure-name">{{dashBoardFilter.structure.description}} <span class="city-name">({{dashBoardFilter.structure.locality}})</span></div>
+
+        </div>
+        <div id="logoWrapper" ng-include="'components/logo/logo.html'"> </div>
+        <ul class="menu list-unstyled" id="navigation_current_page">
+            <sb-item template="structures"></sb-item>
+            <sb-item template="dashboard"></sb-item>
+
+        </ul>
+    </div>
+
+</div>
+<span ng-show="sideBarLoaded()"></span>

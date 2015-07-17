@@ -1,0 +1,67 @@
+{
+    "avgrevbook":{
+                    "code": "avgrevbook",
+                    "type": "progresswidget",
+                    "structure":{
+                                   "title": "Average revenue",
+                                   "text": "Bookings",
+                                   "config":{
+                                                   "events":{
+                                                                   "reload":[
+                                                                                  "ev.general.filter.change.checkout.date"
+                                                                                  ,"ev.general.filter.change.checkin.date"
+                                                                                  ,"ev.general.filter.change.opened.date"
+                                                                   ]
+                                                   }
+
+                                   }
+                    },
+                    "context":"",
+                    "graphic":""
+    },
+
+    "totrevxpaxseg":{
+       "code": "totrevxpaxseg",
+       "type": "chartwidget",
+       "structure":{
+                                   "title": "Total Revenue x Pax Segment",
+                                   "config":{
+                                                   "events":{
+                                                                   "reload":[
+                                                                                  "ev.general.filter.change.checkout.date",
+                                                                                  "ev.general.filter.change.checkin.date",
+                                                                                  "ev.general.filter.change.opened.date"
+                                                                   ]
+                                                   }
+
+                                   }
+                    },
+                    "context":"",
+                    "graphic":{
+                                   "options":"stacked_bars"
+                    }
+    }  ,
+
+
+   "totrevxresmon3ys": {
+       "code": "totrevxresmon3ys",
+       "type": "chartwidget",
+       "structure":{
+                                   "title": "Total Revenue x Reservation Month - 3 Years Statement",
+                                   "config":{
+                                                   "events":{
+                                                                   "reload":[
+                                                                                  "ev.general.filter.change.checkout.date",
+                                                                                  "ev.general.filter.change.checkin.date",
+                                                                                  "ev.general.filter.change.opened.date"
+                                                                   ]
+                                                   }
+
+                                   }
+                    }              ,
+                    "context":"",
+                    "graphic":{
+                                   "options":"stacked_bars"
+                    }
+    }
+}

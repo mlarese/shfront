@@ -1,0 +1,31 @@
+<nav class="navbar hidden-print main " role="navigation">
+
+    <div class="navbar-header pull-left">
+        <div class="user-action user-action-btn-navbar pull-left border-right">
+            <button class="btn btn-sm btn-navbar btn-inverse btn-stroke"><i class="fa fa-bars fa-2x"></i>
+            </button>
+        </div>
+
+        <div class="pull-left hiddens-print hidden-xs mmone-logo" style="margin-left:8px;margin-top:3px">
+            <img src="{{auth.user.logo}}" height="38"/>
+        </div>
+    </div>
+
+    <ul class="main pull-right ">
+
+        <li class="dropdown username">
+            <img id="cmp-user-image" class="hidden-xs img-circle" src="{{auth.user.icon}}" alt="40x40" width="40" /> {{auth.user.name}}
+
+            <span ng-if="lang.active" style="cursor:pointer" ng-repeat="lang in languages" ng-click="setLang(lang.id)">
+                <img alt="{{lang.description}}" title="{{lang.description}}" ng-src="../assets/images/lang/{{lang.id}}.png"/>
+            </span>
+
+        </li>
+    </ul>
+
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+
+        </ul>
+    </div>
+</nav>

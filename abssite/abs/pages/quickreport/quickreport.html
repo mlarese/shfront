@@ -1,0 +1,23 @@
+<div
+        class="container"
+        ng-controller="QuickreportCtrl"
+        ng-init="
+            app.settings.headerVisible = false;
+            app.settings.asideVisible = false;
+            app.settings.container = false;
+            app.settings.headerFixed=false;
+            app.settings.wide=true;
+
+        ">
+
+        <div class="row">
+            <div class="col-sm-12" ng-rowtitle ng-title="{{app.pages.quickreport.title}}" />
+        </div>
+
+        <div class="row wrapper-md ">
+            <div class="col-sm-4" ng-widget ng-name="revenuefacts" />
+            <div class="col-sm-7" ng-widget ng-name="revenuefacts301224" />
+        </div>
+
+
+</div>

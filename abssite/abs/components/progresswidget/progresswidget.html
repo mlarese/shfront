@@ -1,0 +1,22 @@
+<div class="panel  item padder" >
+    <div class="  text-info text-2x ">{{model.data.title|translate}}</div>
+    <span class="text-muted text-lg">{{model.data.text|translate}}</span>
+    <div class="progress-sm m-t-sm bg-light progress ng-isolate-scope" type="primary" animate="true" value="60">
+        <div
+             ng-init="eventName='ev.widgets.reload' ;  eventParams={widgetId:model.data.id};   "
+             ng-click="dispatch(eventName,eventParams)"
+             aria-valuetext="{{model.values.perc}}%"
+             ng-style="{width: model.values.perc + '%'}"
+             aria-valuemax="100" aria-valuemin="0"
+             aria-valuenow="{{model.values.perc}}" role="progressbar"
+             ng-class="type &amp;&amp; 'progress-bar-' + type"
+             class="progress-bar progress-bar-info"
+             style="width: {{model.data.perc}}%;">
+
+        </div>
+    </div>
+    <div  class="top text-right w-full text-info padder text-2x" >
+        {{model.values.value|number}} {{model.values.unit}}
+    </div>
+
+</div>
