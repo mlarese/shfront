@@ -1,4 +1,16 @@
 {
+
+   "consistency_record":{
+           "code":"consistency_code",
+           "template":"consistency_template",
+           "structure":{
+               "title":"consistency_title"
+           },
+           "widgets":[
+               {"code":"consistency_code","width":"small","position":"1"}
+           ]
+      },
+
    "dashboard_default":{
         "code":"dashboard_default",
         "template":"dashboard",

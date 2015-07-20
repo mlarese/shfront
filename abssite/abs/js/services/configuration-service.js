@@ -1,8 +1,7 @@
 angular.module('app')
         .service('ConfigurationService',
-        [
-                  '$log','$rootScope','WidgetSrv',
-          function($log,  $rootScope,  WidgetSrv){
+
+          function($log,  $rootScope){
               var widgetStore={   }  ,
                   getWidgetByKey = function(key){
                       return {id:1};
@@ -142,4 +141,4 @@ angular.module('app')
                   getWidgetTemplateName:getWidgetTemplateName
               }
           }
-    ])
+    )

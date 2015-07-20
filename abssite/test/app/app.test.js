@@ -1,3 +1,4 @@
+"use strict";
 describe('Test app core',function(){
     it('Should have test',function(){
         expect(true).toEqual(true);

@@ -17,6 +17,7 @@ module.exports = function(config) {
       '../libs/angular/angular/angular.js',
       '../libs/angular/angular-aria/angular-aria.js',
       '../libs/angular/oclazyload/dist/ocLazyLoad.js',
+
       '../libs/angular/angular-ui-router/release/angular-ui-router.js',
       '../libs/angular/angular-cookies/angular-cookies.js',
       '../libs/angular/angular-messages/angular-messages.js',
@@ -35,19 +36,15 @@ module.exports = function(config) {
       '../abs/js/infrastructure/*.js',
       '../abs/js/infrastructure/commands/*.js',
       '../abs/js/infrastructure/events/*.js',
-      //'../abs/js/config.js',
-      //'../abs/js/config.lazyload.js',
-      //'../abs/js/config.router.js',
-      '../abs/js/main.js',
-      //'../abs/js/*.js',
-      '../abs/js/services/*.js',
-      //'../abs/js/controllers/*.js',
 
+      '../abs/js/main.js',
+      '../abs/js/services/*.js',
       '../abs/js/factories/*.js',
       '../abs/js/filters/*.js',
 
-      '../test/commands/*.js',
-      '../test/app/*.js'
+      '../test/commangular/*.js',
+      '../test/app/*.js',
+      '../test/services/*.js'
 
     ],
 
@@ -66,13 +63,15 @@ module.exports = function(config) {
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter     'hy-html', 'html','progress'
-    reporters: [ 'html' ],
+    reporters: [ 'progress' ],
 
 
     // web server port
     port: 9876,
 
-
+    client :{
+      captureConsole:true
+    },
     // enable / disable colors in the output (reporters and logs)
     colors: true,
 
@@ -88,7 +87,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome' ],
+    browsers: ['PhantomJS' ],
 
 
     // Continuous Integration mode

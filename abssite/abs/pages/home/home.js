@@ -1,7 +1,7 @@
 'use strict';
-app.controller('HomeCtrl',
-    [           '$scope','$localStorage','$log','facilities',
-        function($scope , $localStorage , $log,  facilities) {
+app
+    .controller('HomeCtrl', function($scope , $localStorage , $log,  facilities,PagesService) {
+
             var pageName='home',
                 dispatchMsg={
                     scope:$scope,
@@ -12,6 +12,7 @@ app.controller('HomeCtrl',
                     }
                 }  ;
             $scope.dispatch('pages.register',dispatchMsg);
+
         }
-    ])
+    )
 ;

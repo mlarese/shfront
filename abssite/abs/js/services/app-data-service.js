@@ -3,7 +3,7 @@ angular.module('app')
     .constant( 'ENDPOINT_METHOD', window.jndi.resource.ENDPOINT_METHOD)
     .constant( 'JSON_FILES_VERSION', "1.0.2" )
 
-    .service(  'RestObjectFactory',     function( $resource,  $log,  $rootScope,  ENDPOINT_URI,ENDPOINT_METHOD ,  JSON_FILES_VERSION  ,  $cacheFactory){
+    .service(  'RestObjectFactory',     function( $resource,  $log,  $rootScope,  ENDPOINT_URI ,  JSON_FILES_VERSION  ,  $cacheFactory){
         var defineResource=function(path,options,entryPoint){
             entryPoint=entryPoint||ENDPOINT_URI+'/'+path+'/:id';
             var updateAction = {

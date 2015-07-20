@@ -20,5 +20,6 @@ var jndi ={
 };
 
 angular.module('app', [
-    'commangular'
+    'commangular',
+    'ngResource'
 ]);
