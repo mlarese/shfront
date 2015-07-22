@@ -1,0 +1,11 @@
+build_settings:
+setup:
+    composer:
+        action: "install"
+failure:
+    email:
+        committer: true
+        default_mailto_address: servicehub@mm-one.com
+complete:
+    email:
+        default_mailto_address: servicehub@mm-one.com
