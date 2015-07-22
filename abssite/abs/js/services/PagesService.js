@@ -1,41 +1,18 @@
 var PagesService=function($resource,$cacheFactory,ENDPOINT_URI) {
-    var endPoint= ENDPOINT_URI+'/pages',
-        pages=null,
-        getPages = function(){ return pages; },
+    var path='/pages',
+        endPoint= ENDPOINT_URI+path,
+        /**
+         * rest resource
+         * @type {$request}
+         */
         resource = $resource(
-            endPoint,
+            endPoint+'/:id',
             { id:'@_id'},
             {query:{ method: 'GET', isArray: false ,cache : $cacheFactory(endPoint) }}
-        ),
-        query = function(){
-            return resource.query().$promise.then(
-                function (response) {
-                    pages=response.toJSON();
-                    return pages;
-                },
-                function (error) {
-                    pages=null;
-                    return pages;
-                }
+        );
 
-            );
-        },
-        load =  function(id) {
-            return query()
-                .then(function (storage) {
-                    var elem = storage[id];
-                    return elem;
-                })
-        };
-    return {
-        endPoint:endPoint,
-        query:query,
-        loadAll:query,
-        load:load,
-        hasPages:function(){return pages!=null},
-        pages:  getPages
-    };
+        angular.extend(this,new ServiceMixin(resource).mixin,{endPoint:endPoint,path:path,resource:resource} );
 }
 
 angular.module('app')
-.service('PagesService',PagesService)
+.service('PageSrv',PagesService)

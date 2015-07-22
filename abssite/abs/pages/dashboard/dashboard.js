@@ -30,7 +30,5 @@ app .controller('DashboardCtrl', function($scope , $localStorage , $log , facili
             })
 
 
-
-
     }
 );

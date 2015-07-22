@@ -38,6 +38,7 @@ module.exports = function(config) {
       '../abs/js/infrastructure/events/*.js',
 
       '../abs/js/main.js',
+      '../abs/js/services/ServiceMixin.js',
       '../abs/js/services/*.js',
       '../abs/js/factories/*.js',
       '../abs/js/filters/*.js',

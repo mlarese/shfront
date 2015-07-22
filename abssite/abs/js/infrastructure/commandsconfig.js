@@ -38,8 +38,8 @@ angular.module('app')
                     chainName:ACTIONS_COMMANDS.CHAIN_COM_WIDGETS_SHOW
                     ,commands:[
                         ACTIONS_COMMANDS.COM_WIDGETS_LOAD
-                        //,ACTIONS_COMMANDS.COM_WIDGETS_LOAD_DATA
-                        //,ACTIONS_COMMANDS.FLOW_CHARTWIDGET_LOAD_CHART_CONFIG
+                        ,ACTIONS_COMMANDS.COM_WIDGETS_LOAD_DATA
+                        ,ACTIONS_COMMANDS.FLOW_CHARTWIDGET_LOAD_CHART_CONFIG
                     ]
                 }
             ],

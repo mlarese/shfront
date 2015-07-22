@@ -40,7 +40,7 @@ commangular.command(ACTIONS_COMMANDS.COM_WIDGETS_LOAD_ALL,function(WidgetSrv){
  *********************************************************/
 commangular.command(ACTIONS_COMMANDS.COM_WIDGETS_LOAD_DATA,function(DataSrv){
     return { execute:function($log,widgetId) {
-        return  DataSrv.get({id:widgetId});
+        return  DataSrv.load(widgetId);
     }}
 },{resultKey:'widgetData'})
 

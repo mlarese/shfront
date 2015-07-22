@@ -10,7 +10,7 @@ angular.module('app')
                     update: { method: 'PUT' }
                 },
                 actions=angular.extend(updateAction,options||{}     ),
-                paramDefaults={ id:'@_id',version:JSON_FILES_VERSION},
+                paramDefaults={ id:'@_id'/*,version:JSON_FILES_VERSION*/},
                 service= $resource( entryPoint, paramDefaults, actions );
 
                 service.loadAll = function(){
@@ -58,31 +58,10 @@ angular.module('app')
             }
         }
     })
-    .service(  'PageSrv',               function ( $rootScope,  RestObjectFactory,  $cacheFactory){
-            var fn='query',
-                options= RestObjectFactory.restFn('PageSrv',false,fn),
-                service = RestObjectFactory.defineResource('pages', options);
 
-            return service;
-    })
-    .service(  'WidgetSrv',             function ( RestObjectFactory , $cacheFactory ){
-        var fn='query',
-            options= RestObjectFactory.restFn('WidgetSrv',false,fn);
-            //options[fn].transformResponse=RestObjectFactory.arrayToObjectTransformer;
-            var service = RestObjectFactory.defineResource('widgets', options);
-
-        return service;
-    })
-    .service(  'ChartConfigSrv',        function(RestObjectFactory,$cacheFactory){
+    .service(  'ChartConfigSrv_',        function(RestObjectFactory,$cacheFactory){
         var fn='query',
             options= RestObjectFactory.restFn('ChartConfigSrv',false,fn);
 
         return RestObjectFactory.defineResource('chartsconfig', options);
-    })
-    .service(  'DataSrv',               function(RestObjectFactory,$cacheFactory){
-        var fn='query',
-            options= RestObjectFactory.restFn('DataSrv',true,fn),
-            service = RestObjectFactory.defineResource('loaddataforwidget', options);
-
-        return service;
     })

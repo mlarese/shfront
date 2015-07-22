@@ -2,11 +2,12 @@
 
 angular.module('app')
   .controller('AppCtrl',
-    function($log,  $rootScope , $scope,   $translate,   $localStorage,   $window , facilities,$commangular  ) {
+    function($log,  $rootScope , $scope,   $translate,   $localStorage,   $window , facilities,$commangular ) {
           var isIE = !!navigator.userAgent.match(/MSIE/i);
           isIE && angular.element($window.document.body).addClass('ie');
           isSmartDevice( $window ) && angular.element($window.document.body).addClass('smart');
           window.$commangular=$commangular;
+
           // config
           var app = {
                 name: 'Abs panel',

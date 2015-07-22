@@ -1,6 +1,6 @@
 'use strict';
 app
-    .controller('HomeCtrl', function($scope , $localStorage , $log,  facilities,PagesService) {
+    .controller('HomeCtrl', function($scope , $localStorage , $log,  facilities) {
 
             var pageName='home',
                 dispatchMsg={
