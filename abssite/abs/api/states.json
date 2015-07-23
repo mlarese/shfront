@@ -1,0 +1,9 @@
+[
+  {
+    "name": "app.dashboard",
+    "url": "/dashboard",
+    "type": "requireCtrl",
+    "template": "<h1>top state</h1>ddddd<div ui-view></div>"
+  }
+
+]

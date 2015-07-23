@@ -1,9 +1,7 @@
 // config
 
-var app =  angular.module('app')
-  .config(
-    [        '$controllerProvider', '$compileProvider', '$filterProvider', '$provide',
-    function ($controllerProvider,   $compileProvider,   $filterProvider,   $provide) {
+angular.module('app')
+  .config(function ($controllerProvider,   $compileProvider,   $filterProvider,   $provide) {
         app.controller = $controllerProvider.register;
         app.directive  = $compileProvider.directive;
         app.filter     = $filterProvider.register;
@@ -12,10 +10,8 @@ var app =  angular.module('app')
         app.constant   = $provide.constant;
         app.value      = $provide.value;
     }
-  ])
-  .config(
-        [       '$translateProvider','tmhDynamicLocaleProvider' ,
-        function($translateProvider  ,tmhDynamicLocaleProvider){
+  )
+  .config(  function($translateProvider  ,tmhDynamicLocaleProvider){
             $translateProvider.useStaticFilesLoader({
               prefix: 'l10n/',
               suffix: '.json'
@@ -24,9 +20,7 @@ var app =  angular.module('app')
             $translateProvider.useLocalStorage();
             tmhDynamicLocaleProvider.localeLocationPattern('../libs/angular/i18n/angular-locale_{{locale}}.js');
 
-  }])
-  .run(
-        [        'tmhDynamicLocale',
-        function( tmhDynamicLocale){
+  })
+  .run(function( tmhDynamicLocale){
             tmhDynamicLocale.set('it');
-  }]);
+  });

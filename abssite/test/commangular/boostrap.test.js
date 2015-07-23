@@ -1,5 +1,5 @@
 "use strict";
-describe('Unit $commangular',function(){
+describe('Configuration of $commangular library',function(){
     var $commangular,
         dispatcher;
     beforeEach(module('app'));

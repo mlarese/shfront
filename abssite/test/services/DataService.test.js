@@ -1,4 +1,4 @@
-describe('Service that load data inside widgets',function(){
+describe('Data Service  to load data inside widgets',function(){
     var DataService,$httpBackend,
         mockResponse={"perc":70,"unit":"€","value":150}
         ;

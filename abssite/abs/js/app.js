@@ -1,5 +1,6 @@
 'use strict';
-angular.module('app', [
+var isAmdProject=false;
+var app = angular.module('app', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -18,6 +19,7 @@ angular.module('app', [
     'ngMaterial',
     'facilities',
     'commangular',
+    'ct.ui.router.extras',
     //'flux',
     'tmh.dynamicLocale'
 ]);

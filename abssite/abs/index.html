@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/font.css" type="text/css" />
 
     <link rel="stylesheet" href="css/app.css" type="text/css" />
-    <script>
+    <script >
         //jndi
         var jndi ={
             resource:{
@@ -26,7 +26,7 @@
                 ,startUrl:'/app/home'
                 ,states:[
                     'home'
-                    ,'dashboard'
+                    //,'dashboard'
                     ,'login'
                     ,'quickreport'
                 ]
@@ -57,6 +57,7 @@
   <!-- ngMaterial -->
   <script src="../libs/angular/angular-material/angular-material.js"></script>
   <script src="../libs/angular/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="../libs/angular/ui-router-extras/release/ct-ui-router-extras.min.js"></script>
   <script src="../libs/angular/ngstorage/ngStorage.js"></script>
   <script src="../libs/angular/angular-ui-utils/ui-utils.js"></script>
   <!-- ngMaterial -->
@@ -83,13 +84,13 @@
   <script src="js/config.lazyload.js"></script>
   <script src="js/config.router.js"></script>
   <script src="js/main.js"></script>
-  <script src="js/services/app-data-service.js"></script>
   <script src="js/services/ServiceMixin.js"></script>
+  <script src="js/services/MenuService.js"></script>
   <script src="js/services/ChartConfigService.js"></script>
   <script src="js/services/DataService.js"></script>
   <script src="js/services/PagesService.js"></script>
   <script src="js/services/WidgetsService.js"></script>
-  <script src="js/services/configuration-service.js"></script>
+  <script src="js/services/ConfigurationService.js"></script>
 
   <script src="js/factories/facilities.js"></script>
   <script src="js/services/ui-load.js"></script>
@@ -107,6 +108,7 @@
   <script src="js/directives/ui-toggleclass.js"></script>
   <script src="js/directives/ui-with.js"></script>
   <script src="js/directives/ng-widget.js"></script>
+  <script src="js/directives/ng-chart.js"></script>
   <script src="js/directives/flot-chart.js"></script>
   <script src="js/directives/daterangepicker.js"></script>
   <script src="js/controllers/bootstrap.js"></script>

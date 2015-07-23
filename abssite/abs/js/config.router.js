@@ -1,16 +1,10 @@
 'use strict';
 angular.module('app')
-  .run(
-    [          '$rootScope', '$state', '$stateParams',
-      function ($rootScope,   $state,   $stateParams) {
+  .run(function ($rootScope,   $state,   $stateParams) {
           $rootScope.$state = $state;
-          $rootScope.$stateParams = $stateParams;        
-      }
-    ]
-  )
-  .config(
-    [            '$stateProvider', '$urlRouterProvider', 'JQ_CONFIG', 'MODULE_CONFIG' ,'APP_CONFIG','PG_CONFIG',
-      function (  $stateProvider,   $urlRouterProvider,   JQ_CONFIG,   MODULE_CONFIG  , APP_CONFIG , PG_CONFIG) {
+          $rootScope.$stateParams = $stateParams;
+  })
+  .config( function (  $stateProvider,   $urlRouterProvider,   JQ_CONFIG,   MODULE_CONFIG  , APP_CONFIG , PG_CONFIG) {
           var layout = APP_CONFIG.router.appLayout ;
           $urlRouterProvider.otherwise(APP_CONFIG.router.startUrl);
 
@@ -77,6 +71,4 @@ angular.module('app')
                 }]
             }
           }
-      }
-    ]
-  );
+      });

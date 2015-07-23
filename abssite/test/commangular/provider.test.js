@@ -1,4 +1,4 @@
-describe('Unit commangular ',function(){
+describe('Configuration of commangular instance (dispatch) ',function(){
     var provider,scope,injector,$timeout,$log;
     beforeEach(function() {
         module('commangular', function($commangularProvider) {

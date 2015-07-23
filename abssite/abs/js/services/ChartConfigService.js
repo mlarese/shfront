@@ -12,6 +12,12 @@ var ChartConfigService= function ($resource,ENDPOINT_URI,$cacheFactory) {
     angular.extend(this,new ServiceMixin(resource).mixin,{endPoint:endPoint,path:path,resource:resource  } );
 }
 
-angular.module('app')
-    .service('ChartConfigService',ChartConfigService)
-    .service('ChartConfigSrv',ChartConfigService)
+if (isAmdProject)
+    define(['app'], function (app) {
+        app.service('ChartConfigService',ChartConfigService)
+            .service('ChartConfigSrv',ChartConfigService)
+    })
+else
+    angular.module('app')
+        .service('ChartConfigService',ChartConfigService)
+        .service('ChartConfigSrv',ChartConfigService)
