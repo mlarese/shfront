@@ -1,31 +1,27 @@
 <!-- list -->
 <ul class="nav">
-    <li  class="active">
 
-        <a class="auto" href="">
-            <span class="pull-right text-muted">
-                <i class="fa fa-fw fa-angle-right text"></i>
-                <i class="fa fa-fw fa-angle-down text-active"></i>
+    <li ng-class="{active:$index==0}" ng-repeat="itemMenu in sideMenu" ui-sref-active="active">
+        <a class="auto" href="#/app{{itemMenu.url}}" ui-sref="app.{{itemMenu.url.replace('/','')}}">
+            <span class="pull-right text-muted"  ng-if="itemMenu.children.length>0" >
+                <i  class="fa fa-fw fa-angle-right text"></i>
+                <i  class="fa fa-fw fa-angle-down text-active"></i>
             </span>
-            <i class="glyphicon glyphicon-signal icon"></i>
-            <span class="ng-scope">Dashboard</span>
+            <i class="glyphicon {{itemMenu.iconurl}} icon"></i>
+            <span class="ng-scope">{{itemMenu.name}}</span>
         </a>
 
-        <ul class="nav nav-sub dk">
-            <li class="nav-sub-header">
-                <a href="">
-                    <span cccc="aside.nav.components.pages.PAGES" class="ng-scope">Pages</span>
+        <ul class="nav nav-sub dk" ng-if="itemMenu.children.length>0">
+
+            <li  ng-repeat="child in itemMenu.children" ui-sref-active="active">
+                <a  href="#/app{{child.url}}"  ui-sref="app.{{child.url.replace('/','')}}">
+                    <span  class="ng-scope">{{child.name}}</span>
                 </a>
             </li>
-            <li ui-sref-active="active">
-                <a ui-sref="app.page.profile" href="#/app/page/profile">
-                    <span cccc="aside.nav.components.pages.PROFILE" class="ng-scope">Profile</span>
-                </a>
-            </li>
-
-
         </ul>
+
     </li>
+
 
 </ul>
 <!-- / list -->

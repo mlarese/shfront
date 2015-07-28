@@ -17,6 +17,7 @@ var ServiceMixin =function(resource) {
             return this.loadAll().then(
                 function (response) {
                     var item = response[id];
+
                     return item;
                 },
                 function (error) {

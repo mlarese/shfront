@@ -49,7 +49,6 @@ var _PG_CONFIG_ = {
     ,'pages/quickreport/quickreport':[].concat(_JQ_CONFIG_.plot,_JQ_CONFIG_.sortable,_JQ_CONFIG_.daterangepicker)
 }
 
-
 angular.module('app')
   .constant('APP_CONFIG',window.jndi)
   .constant('WIDGET_CONFIG',{
@@ -184,6 +183,8 @@ angular.module('app')
   ])
   .config(['$ocLazyLoadProvider', 'MODULE_CONFIG', function($ocLazyLoadProvider, MODULE_CONFIG) {
       // We configure ocLazyLoad to use the lib script.js as the async loader
+      jndi.provider.$ocLazyLoadProvider=$ocLazyLoadProvider;
+
       $ocLazyLoadProvider.config({
           debug:  false,
           events: true,

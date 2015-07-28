@@ -1,9 +1,12 @@
 'use strict';
-var AppCtrl = function ($rootScope, $scope, $translate, $timeout, $localStorage, $window, facilities, $commangular) {
+var AppCtrl = function ($rootScope,$state, $scope, $translate, $timeout, $localStorage, $window, facilities, $commangular) {
     var isIE = !!navigator.userAgent.match(/MSIE/i);
     isIE && angular.element($window.document.body).addClass('ie');
     isSmartDevice($window) && angular.element($window.document.body).addClass('smart');
-    window.$commangular = $commangular;
+
+    jndi.$fn.$commangular = $commangular;
+    jndi.$fn.$state = $state;
+    jndi.$fn.$dispatch = $commangular.dispatch;
 
     // config
     var app = {
@@ -67,12 +70,13 @@ var AppCtrl = function ($rootScope, $scope, $translate, $timeout, $localStorage,
         return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
     }
 
-
+    $scope.dispatch(ACTIONS_COMMANDS.CHAIN_COM_LOAD_ROUTE).then(function (response) {
+        $rootScope.sideMenu=response.menus;
+    })
 }
 
-    angular.module('app')
-        .constant('ENDPOINT_URI', window.jndi.resource.ENDPOINT_URI)
-        .constant('ENDPOINT_METHOD', window.jndi.resource.ENDPOINT_METHOD)
-        .constant('JSON_FILES_VERSION', "1.0.2")
-        .controller('AppCtrl',AppCtrl)
-        ;
+angular.module('app')
+    .constant('ENDPOINT_URI', window.jndi.resource.ENDPOINT_URI)
+    .constant('ENDPOINT_URI_ORIGIN', window.jndi.resource.ENDPOINT_URI_ORIGIN)
+    .constant('JSON_FILES_VERSION', "1.0.2")
+    .controller('AppCtrl',AppCtrl) ;

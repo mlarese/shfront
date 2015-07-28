@@ -1,5 +1,5 @@
 'use strict';
-var isAmdProject=false;
+if(!jndi) window.jndi={provider:{},router:{},resource:{},$fn:{}};
 var app = angular.module('app', [
     'ngAnimate',
     'ngAria',
@@ -19,7 +19,6 @@ var app = angular.module('app', [
     'ngMaterial',
     'facilities',
     'commangular',
-    'ct.ui.router.extras',
     //'flux',
     'tmh.dynamicLocale'
 ]);

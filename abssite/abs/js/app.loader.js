@@ -7,12 +7,7 @@ define([
         "pagescommands",
         "chartscommands",
         "ServiceMixin",
-        "MenuService",
-        "ChartConfigService",
-        "DataService",
-        "PagesService",
-        "WidgetsService",
-        "ConfigurationService",
+
         "facilities",
         "fromNow",
         "capitalize",
@@ -31,7 +26,14 @@ define([
         "ng-chart",
         //"flo-Tchart",
         "daterangepicker",
-        "ui-router-extras"
+        "MenuService"
+        /*,
+        "ChartConfigService",
+        "DataService",
+        "PagesService",
+        "WidgetsService",
+        "ConfigurationService",
+        "ui-router-extras"*/
     ],
     function (app) {
         app.run(function ($rootScope, $state, $stateParams) {
@@ -109,7 +111,7 @@ define([
             }
         })
         .constant('ENDPOINT_URI', window.jndi.resource.ENDPOINT_URI)
-        .constant('ENDPOINT_METHOD', window.jndi.resource.ENDPOINT_METHOD)
+
         .constant('JSON_FILES_VERSION', "1.0.2")
         .config(function ($controllerProvider,   $compileProvider,   $filterProvider,   $provide) {
             app.controller = $controllerProvider.register;

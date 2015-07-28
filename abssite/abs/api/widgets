@@ -3,18 +3,18 @@
                     "code": "avgrevbook",
                     "type": "progresswidget",
                     "structure":{
-                                   "title": "Average revenue",
-                                   "text": "Bookings",
-                                   "config":{
-                                                   "events":{
-                                                                   "reload":[
-                                                                                  "ev.general.filter.change.checkout.date"
-                                                                                  ,"ev.general.filter.change.checkin.date"
-                                                                                  ,"ev.general.filter.change.opened.date"
-                                                                   ]
-                                                   }
+                           "title": "Average revenue",
+                           "text": "Bookings",
+                           "config":{
+                               "events":{
+                                   "reload":[
+                                          "ev.general.filter.change.checkout.date"
+                                          ,"ev.general.filter.change.checkin.date"
+                                          ,"ev.general.filter.change.opened.date"
+                                   ]
+                               }
 
-                                   }
+                           }
                     },
                     "context":"",
                     "graphic":""

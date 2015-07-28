@@ -24,3 +24,19 @@ commangular.command(ACTIONS_COMMANDS.COM_PAGES_ASSIGN_TO_SCOPE,function(PageSrv)
         return PageSrv.assignToScope(id , scope , attribute,section);
     }}
 },{resultKey:'page'})
+/*********************************************************
+ * command pages.load.all
+ *      action Load all the pages
+ *      return the pages list;
+ *********************************************************/
+commangular.command(ACTIONS_COMMANDS.COM_PAGES_LOAD_ALL,function(PageSrv){
+    return { execute:function($log) {
+        return PageSrv.loadAll();
+    }}
+},{resultKey:'pages'})
+
+commangular.command(ACTIONS_COMMANDS.COM_ADD_ROUTER_STATES,function(StatusManagerService){
+    return { execute:function(pages,menus) {
+        StatusManagerService.setStates(pages,menus);
+    }}
+})

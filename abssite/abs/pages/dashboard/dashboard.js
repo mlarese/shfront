@@ -1,7 +1,9 @@
 'use strict';
-app .controller('DashboardCtrl', function($scope , $localStorage , $log , facilities , DataSrv  ) {
+app .controller('DashboardCtrl', function($scope , $localStorage , $log , facilities , DataSrv,$state  ) {
+
         var pageName='dashboard',
-            pageSection='revenue',
+            curStatus=$state.current,
+            pageSection=curStatus.code,
             options =  {
                 leftColumns:12,
                 centerColumns:0,
@@ -19,11 +21,13 @@ app .controller('DashboardCtrl', function($scope , $localStorage , $log , facili
                 }
             }  ;
 
+
+
         $scope.dispatch(COM_PAGES_REGISTER ,dispatchMsg)
             .then(function(afterRegister) {
                 $scope.dispatch(COM_PAGES_ASSIGN_TO_SCOPE, {
-                    id: 'dashboard_default',
-                    section: 'revenue',
+                    id: pageSection,
+                    section: pageSection,
                     scope: $scope.app.pages.dashboard,
                     attribute: '.'
                 })

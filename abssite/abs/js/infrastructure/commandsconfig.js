@@ -38,9 +38,17 @@ angular.module('app')
                     chainName:ACTIONS_COMMANDS.CHAIN_COM_WIDGETS_SHOW
                     ,commands:[
                         ACTIONS_COMMANDS.COM_WIDGETS_LOAD
-                        ,ACTIONS_COMMANDS.COM_WIDGETS_LOAD_DATA
-                        ,ACTIONS_COMMANDS.FLOW_CHARTWIDGET_LOAD_CHART_CONFIG
+                        //,ACTIONS_COMMANDS.COM_WIDGETS_LOAD_DATA
+                        //,ACTIONS_COMMANDS.FLOW_CHARTWIDGET_LOAD_CHART_CONFIG
                     ]
+                },
+                {
+                    chainName:ACTIONS_COMMANDS.CHAIN_COM_LOAD_ROUTE
+                    ,commands:[
+                        ACTIONS_COMMANDS.COM_PAGES_LOAD_ALL
+                        ,ACTIONS_COMMANDS.COM_MENUS_LOAD_ALL
+                        ,ACTIONS_COMMANDS.COM_ADD_ROUTER_STATES
+                ]
                 }
             ],
             add = function(mapTo) {

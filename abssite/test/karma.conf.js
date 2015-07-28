@@ -30,6 +30,7 @@ module.exports = function(config) {
       '../libs/angular/angular-bootstrap/ui-bootstrap-tpls.js',
       '../libs/angular/angular-bootstrap/ui-bootstrap-tpls.js',
       '../libs/angular/angular-ui-utils/ui-utils.js',
+      '../libs/general/jsonselect.js',
       '../test/config.js',
       '../abs/js/directives/*.js',
       '../abs/js/infrastructure/*.js',

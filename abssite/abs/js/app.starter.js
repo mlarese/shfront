@@ -1,4 +1,3 @@
-var isAmdProject=true;
 var  _JQ_CONFIG_={
     easyPieChart:   [   '../libs/jquery/jquery.easy-pie-chart/dist/jquery.easypiechart.fill.js'],
     sparkline:      [   '../libs/jquery/jquery.sparkline/dist/jquery.sparkline.retina.js'],
@@ -52,6 +51,7 @@ var _PG_CONFIG_ = {
 define([
     'angularAMD',
     'jquery',
+    'angular',
     'angular-ui-router',
     "ngload",
     "commangular",
@@ -68,10 +68,11 @@ define([
     "ui-bootstrap-tpls",
     "ocLazyLoad",
     "ui-load",
-    "facilities"
+    "facilities",
+    "app-loader"
 ],function (angularAMD) {
     console.log('Bootstrap')
-    alert("")
+
     var app = angular.module("app", [
         'ngAnimate',
         'ngAria',
@@ -96,7 +97,7 @@ define([
     ]);
 
     var ret = angularAMD.bootstrap(app) ;
-    require("app-loader")
+    //require("app-loader")
     return ret;
 
 });

@@ -17,16 +17,23 @@ const ACTIONS_EVENTS_PARA = {
 
 const ACTIONS_COMMANDS = {
     COM_ALERT_BOX:'alert.box',
+    COM_MENUS_LOAD_ALL:'menus.load.all',
     COM_PAGES_REGISTER : 'pages.register',
     COM_PAGES_ASSIGN_TO_SCOPE:'pages.assign.to.scope',
+    COM_PAGES_LOAD_ALL:'pages.load.all',
     COM_WIDGETS_ASSIGN_TO_SCOPE:'widgets.assign.to.scope',
     COM_WIDGETS_LOAD_ALL:'widgets.load.all',
     COM_WIDGETS_LOAD_DATA:'widgets.load.data',
     COM_WIDGETS_LOAD:'widgets.load',
+    COM_ADD_ROUTER_STATES:'add.router.states',
+
     COM_CHARTS_LOAD_CONFIG:'charts.load.config',
     COM_CHARTS_ASSIGN_TO_SCOPE:'charts.assign.to.scope',
+
     FLOW_CHARTWIDGET_LOAD_CHART_CONFIG:'flow.chartwidget.load.chart.config',
     CHAIN_COM_WIDGETS_SHOW:'widgets.show',
+    CHAIN_COM_LOAD_ALL_MENU_AND_PAGES:'menu.pages.load.all',
+    CHAIN_COM_LOAD_ROUTE:'load.route',
     RAISE_EVENT:'raise.event'
 }
 

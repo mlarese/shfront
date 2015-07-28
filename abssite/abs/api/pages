@@ -1,18 +1,21 @@
 {
 
-   "consistency_record":{
-           "code":"consistency_code",
-           "template":"consistency_template",
-           "structure":{
-               "title":"consistency_title"
-           },
-           "widgets":[
-               {"code":"consistency_code","width":"small","position":"1"}
-           ]
-      },
 
-   "dashboard_default":{
-        "code":"dashboard_default",
+    "single":{
+        "code":"single",
+        "template":"dashboard",
+        "structure":{
+            "title":"default single"
+        },
+        "widgets":[
+            {"code":"avgrevbook","width":"small","position":"1"},
+            {"code":"totrevxpaxseg","width":"large","position":"3"}
+        ]
+   },
+
+
+   "pax":{
+        "code":"pax",
         "template":"dashboard",
         "structure":{
             "title":"default dashboard"
@@ -23,15 +26,16 @@
         ]
    },
 
-   "dashboard_revenue":{
-       "code":"dashboard_revenue",
+   "revenue":{
+       "code":"revenue",
        "template":"dashboard",
        "structure":{
            "title":"revenue dashboard"
        },
        "widgets":[
-           {"code":"avgrevbook","width":"small","position":"1"},
-           {"code":"totrevxpaxseg","width":"large","position":"3"}
+           {"code":"avgrevbook","width":"medium","position":"1"},
+           {"code":"totrevxpaxseg","width":"full","position":"3"},
+           {"code":"totrevxresmon3ys","width":"full","position":"4"}
        ]
     }
 }
