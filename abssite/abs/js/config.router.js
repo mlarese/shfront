@@ -9,7 +9,6 @@ angular.module('app')
           $urlRouterProvider.otherwise(APP_CONFIG.router.startUrl);
 
 
-
           var load=function (srcs, callback) {
             return {
                 deps:  function( $ocLazyLoad, $q ){
@@ -33,7 +32,7 @@ angular.module('app')
                                     name = module.name;
 
                             });
-                            return $ocLazyLoad.load(name);
+                            return $ocLazyLoad.load(name,{cache: true});
                         } );
                     });
                     deferred.resolve();
@@ -48,7 +47,7 @@ angular.module('app')
               options=options||{};
               options.code = name;
               options.url="/"+name;
-              options.templateUrl=pathName+'.html';
+              options.templateUrl=pathName+'.html?v=1.0.2';
 
               modules.push(pathName+'.js');
               if(PG_CONFIG[pathName]) {

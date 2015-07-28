@@ -31,6 +31,7 @@ commangular.command(ACTIONS_COMMANDS.COM_PAGES_ASSIGN_TO_SCOPE,function(PageSrv)
  *********************************************************/
 commangular.command(ACTIONS_COMMANDS.COM_PAGES_LOAD_ALL,function(PageSrv){
     return { execute:function($log) {
+
         return PageSrv.loadAll();
     }}
 },{resultKey:'pages'})

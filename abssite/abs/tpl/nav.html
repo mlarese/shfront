@@ -1,8 +1,17 @@
 <!-- list -->
 <ul class="nav">
 
-    <li ng-class="{active:$index==0}" ng-repeat="itemMenu in sideMenu" ui-sref-active="active">
-        <a class="auto" href="#/app{{itemMenu.url}}" ui-sref="app.{{itemMenu.url.replace('/','')}}">
+    <!-------------------------------------------------------------------------------------------->
+    <!--                         Menu and Submenu                                               -->
+    <!-------------------------------------------------------------------------------------------->
+    <li ng-if="itemMenu.url==''" ng-class="{active:$index==0}" ng-repeat="itemMenu in sideMenu" ng-class="{active:$state.includes(mstate)}"
+                ng-init="
+                    murl='#/app'+itemMenu.url;
+                    maUrl=itemMenu.url.split('/');
+                    mstate='app'+maUrl.join('.');
+                 ">
+
+        <a class="auto" href="" >
             <span class="pull-right text-muted"  ng-if="itemMenu.children.length>0" >
                 <i  class="fa fa-fw fa-angle-right text"></i>
                 <i  class="fa fa-fw fa-angle-down text-active"></i>
@@ -11,17 +20,38 @@
             <span class="ng-scope">{{itemMenu.name}}</span>
         </a>
 
-        <ul class="nav nav-sub dk" ng-if="itemMenu.children.length>0">
 
-            <li  ng-repeat="child in itemMenu.children" ui-sref-active="active">
-                <a  href="#/app{{child.url}}"  ui-sref="app.{{child.url.replace('/','')}}">
-                    <span  class="ng-scope">{{child.name}}</span>
+        <ul class="nav nav-sub dk" ng-if="itemMenu.children.length>0">
+            <li  ng-repeat="child in itemMenu.children" ui-sref-active="active"
+                 ng-init="
+                    url='#/app'+child.url;
+                    aUrl=child.url.split('/');
+                    state='app'+aUrl.join('.');
+                 ">
+                <a  href="{{url}}"  ui-sref="{{state}}" >
+                    <span  class="ng-scope">{{child.name}} </span>
                 </a>
             </li>
         </ul>
 
     </li>
 
+    <!-------------------------------------------------------------------------------------------->
+    <!--                         Menu                                                           -->
+    <!-------------------------------------------------------------------------------------------->
+    <li ng-if="itemMenu.url!=''" ng-class="{active:$index==0}" ng-repeat="itemMenu in sideMenu" ui-sref-active="active"
+        ng-init="
+                    murl='#/app'+itemMenu.url;
+                    maUrl=itemMenu.url.split('/');
+                    mstate='app'+maUrl.join('.');
+                 ">
+
+        <a ng-if="itemMenu.url!=''" class="auto" href="#/app{{itemMenu.url}}"  ui-sref="{{mstate}}" >
+            <i class="glyphicon {{itemMenu.iconurl}} icon"></i>
+            <span class="ng-scope">{{itemMenu.name}}</span>
+        </a>
+
+    </li>
 
 </ul>
 <!-- / list -->
