@@ -14,12 +14,14 @@
 
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script >
-        var tmpEndpointUri = '/shfront/abssite/abs/api'
-        //var tmpEndpointUri = '//shcore.mm-one.com.stg/platform'
+        //var tmpEndpointUri = '/shfront/abssite/abs/api';
+        var tmpEndpointUri = '//shcore.mm-one.com.stg';
+        //var tmpEndpointUri = '//shcore.mm-one.com.local';
         //jndi
         var jndi ={
             provider:{},
             $fn:{},
+            $scopes:{widgets:{}},
             resource:{
                 ENDPOINT_URI:tmpEndpointUri,
                 ENDPOINT_URI_ORIGIN:(tmpEndpointUri=='/shfront/abssite/abs/api'?'file':'hub')
@@ -29,8 +31,6 @@
                 ,startUrl:'/app/home'
                 ,states:[
                     'home'
-                    //,'dashboard'
-                    //,'quickreport'
                 ]
             }
         };

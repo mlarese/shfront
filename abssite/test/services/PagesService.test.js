@@ -25,7 +25,7 @@ describe('Pages service test (loading pages definitions)',function() {
         pageBackEndResource=PageSrv.resource;
     }))
     it('Should point to /pages',function(){
-        expect(PageSrv.path).toBe('/pages');
+        expect(PageSrv.path).toBe('/platform/pages');
     })
     it('Back End Resource must be defined',function(){
         expect(pageBackEndResource).toBeDefined();

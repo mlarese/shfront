@@ -1,12 +1,24 @@
 <div class="panel panel-default">
     <div class="panel-heading font-bold">{{model.data.title|translate}}</div>
     <div class="panel-body">
-        <div    chart
-                style="height: 240px; width:100%;padding: 0px; position: relative;"
-                ng-model='model.data.data'
-                ng-options='model.data.options'
-                > </div>
-        <div ng-chart  chart-name="{{model.data.id}}" />
+
+
+        <!----------------------
+            Graph
+        ----------------------->
+
+        <div
+            ng-chart
+            chart-name="{{model.data.id}}"
+            chart-values="model.values"
+            chart-options="{{model.data.options}}"
+            chart-type="{{model.data.optionsName}}"
+            style="height:270px"
+        />
+
+        <!----------------------
+            Table
+        ----------------------->
         <div id="{{model.data.id}}-table" class="chart-table {{model.data.id}}-chart-element" style="padding-right:7px">
 
             <table class="dynamicTable scrollVertical table table-primary dataTable" style="margin-right:7px;">

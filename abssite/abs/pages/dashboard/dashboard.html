@@ -6,7 +6,7 @@
             --------------------------------------------------------->
             <div class="col-md-{{app.pages.dashboard.leftColumns}}"  >
                 <div  ng-repeat="widget in app.pages.dashboard.widgets" class="col-md-{{facilities.sizeToColumns(widget.width)}}"   >
-                    <div ng-widget ng-name="{{widget.code}}" />
+                    <div ng-widget ng-name="{{widget.code}}" ng-model="model" />
                 </div>
             </div>
 

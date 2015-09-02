@@ -1,5 +1,5 @@
 var PagesService=function($resource,$cacheFactory,ENDPOINT_URI) {
-    var path='/pages',
+    var path='/platform/pages',
         endPoint= ENDPOINT_URI+path,
         /**
          * rest resource

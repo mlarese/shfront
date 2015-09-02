@@ -7,6 +7,7 @@ var AppCtrl = function ($rootScope,$state, $scope, $translate, $timeout, $localS
     jndi.$fn.$commangular = $commangular;
     jndi.$fn.$state = $state;
     jndi.$fn.$dispatch = $commangular.dispatch;
+    jndi.$rootScope = $rootScope;
 
     // config
     var app = {

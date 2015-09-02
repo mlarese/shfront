@@ -1,5 +1,15 @@
 {
 
+    "home":{
+            "code":"home",
+            "template":"home",
+            "structure":{
+                "title":"Home"
+            },
+            "widgets":[
+                {"code":"dashboardlist","width":"small","position":"3"}
+            ]
+       },
 
     "single":{
         "code":"single",
@@ -13,6 +23,17 @@
         ]
    },
 
+    "rooms":{
+        "code":"rooms",
+        "template":"dashboard",
+        "structure":{
+            "title":"default dashboard"
+        },
+        "widgets":[
+            {"code":"avgrevbook","width":"small","position":"1"},
+            {"code":"totrevxpaxseg","width":"large","position":"3"}
+        ]
+   },
 
    "pax":{
         "code":"pax",

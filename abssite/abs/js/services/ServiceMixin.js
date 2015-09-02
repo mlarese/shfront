@@ -29,6 +29,7 @@ var ServiceMixin =function(resource) {
             return this.loadAll()
                 .then(function (storage) {
                     var elem = storage[id];
+                    if(!elem) return null;
                     if (subId && elem[subId])
                         elem = elem[subId]
 

@@ -5,9 +5,13 @@ angular.module('app')
         restrict: 'EA',
         replace: false,
         scope: {
-            ngName: '@'
+            ngName: '@',
+            ngModel:'='
         },
-        controller:function($scope,$timeout){
+        controller:function($scope,$timeout,$log){
+            jndi.$scopes.widgets[$scope.ngName]=$scope;
+
+            $log.info('ngWidget.'+$scope.ngName);
             var dispatchParameters={widgetId:$scope.ngName},
                 reloadWidgetById=function(id){
                     if(id!=$scope.ngName) return;
@@ -26,10 +30,12 @@ angular.module('app')
                         values=dispatchedMessage.widgetData ;
                     if(!$scope.model) $scope.model={};
                     $scope.model.values = values;
+
                 },
                 assignWidgetData=function(data){
                     if(!$scope.model) $scope.model={};
                     $scope.model.data = data;
+
                 },
                 assignWidgetTemplate=function(templateType){
                     $scope.template = ConfigurationService.getWidgetTemplateName(templateType,tempaltesVersion)
@@ -37,11 +43,13 @@ angular.module('app')
                 assignWidgetEvents=function(widget){
                     $rootScope.$on( EV_WIDGETS_RELOAD_ALL,reloadWidget);
                     $rootScope.$on(EV_WIDGETS_RELOAD,reloadWidgetById);
-                    if(widget && widget.config && widget.config.events  && widget.config.events.reload){
-                        var events=widget.config.events.reload;
 
-                        for(var i=0;i<events.length;i++)
-                            $rootScope.$on(events[i],reloadWidget);
+                    if(widget && widget.structure && widget.structure.config && widget.structure.config.events  && widget.structure.config.events.reload){
+                        var events=widget.structure.config.events.reload;
+                        for(var i=0;i<events.length;i++) {
+                            $log.info(events[i]);
+                            $rootScope.$on(events[i], reloadWidget);
+                        }
                     }
                 };
 
@@ -50,12 +58,20 @@ angular.module('app')
 
             $scope.dispatch( CHAIN_COM_WIDGETS_SHOW ,dispatchParameters)
                 .then(function(response){
+
                     var widget = response.widget,
+                        optionsName='',
+                        options={},
                         values={};
 
+                    if(response.chartConfig){
+                        options = response.chartConfig;
+                        optionsName = widget.graphic.options;
+                    }
                     if(widget){
-                        var widgetStructure ={id:widget.code,type:widget.type};
+                        var widgetStructure ={id:widget.code,type:widget.type,options:options,optionsName:optionsName};
                         angular.extend(widgetStructure,widget.structure);
+
                         assignWidgetValues(response);
                         assignWidgetData(widgetStructure);
                         assignWidgetTemplate(widget.type);
@@ -66,7 +82,7 @@ angular.module('app')
                 })
 
         },
-        template:'<div  ng-include="template" model="model"  />' ,
+        template:'<div  ng-include="template" ng-model="model"  />' ,
         link: function(scope, iElement, iAttrs) { }
     };
 })

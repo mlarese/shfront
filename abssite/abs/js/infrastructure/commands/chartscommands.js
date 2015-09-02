@@ -19,7 +19,9 @@ commangular.command(ACTIONS_COMMANDS.COM_CHARTS_ASSIGN_TO_SCOPE,function(ChartCo
  *********************************************************/
 commangular.command(ACTIONS_COMMANDS.COM_CHARTS_LOAD_CONFIG,function(ChartConfigSrv){
     return { execute:function($log , widget ) {
-        return ChartConfigSrv.load(widget.options );
+        if(widget && widget.graphic && widget.graphic.options)
+            return ChartConfigSrv.load(widget.graphic.options );
+        else return null;
     }}
 },{resultKey:'chartConfig'})
 

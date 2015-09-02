@@ -8,6 +8,7 @@ var  _JQ_CONFIG_={
                         '../libs/jquery/flot.categories/js/jquery.flot.categories.js',
                         '../libs/jquery/flot.orderbars/js/jquery.flot.orderBars.js',
                         '../libs/jquery/flot-spline/js/jquery.flot.spline.min.js'],
+
     moment:         [   '../libs/jquery/moment/moment.js'],
     screenfull:     [   '../libs/jquery/screenfull/dist/screenfull.min.js'],
     slimScroll:     [   '../libs/jquery/slimscroll/jquery.slimscroll.min.js'],
