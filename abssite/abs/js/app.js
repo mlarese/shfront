@@ -19,6 +19,8 @@ var app = angular.module('app', [
     'ngMaterial',
     'facilities',
     'commangular',
+    //'blockUI' ,
+    'nouidateslider',
     //'flux',
     'tmh.dynamicLocale'
 ]);

@@ -4,11 +4,15 @@
             <!--------------------------------------------------------
                     Left column
             --------------------------------------------------------->
-            <!-- div class="col-md-{{app.pages.home.leftColumns}}"  >
+            <div class="col-md-{{app.pages.home.leftColumns}}"  >
                 <div  ng-repeat="widget in app.pages.home.widgets" class="col-md-{{facilities.sizeToColumns(widget.width)}}"   >
                     <div ng-widget ng-name="{{widget.code}}" />
                 </div>
-            </div-->
+
+
+                <div ng-widget ng-name="daterange"></div>
+
+            </div>
 
 
 

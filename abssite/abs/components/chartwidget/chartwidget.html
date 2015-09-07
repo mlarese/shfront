@@ -1,47 +1,53 @@
 <div class="panel panel-default">
     <div class="panel-heading font-bold">{{model.data.title|translate}}</div>
     <div class="panel-body">
-
-
         <!----------------------
             Graph
         ----------------------->
+        <div style="overflow:auto">
+            <div style="width:{{model.values.labelsWidth}}px" >
+                <div
+                ng-chart
+                chart-name="{{model.data.id}}"
+                chart-values="model.values"
+                chart-options="{{model.data.options}}"
+                chart-type="{{model.data.optionsName}}"
+                style="height:270px"
+                />
 
-        <div
-            ng-chart
-            chart-name="{{model.data.id}}"
-            chart-values="model.values"
-            chart-options="{{model.data.options}}"
-            chart-type="{{model.data.optionsName}}"
-            style="height:270px"
-        />
+                <!----------------------
+                    Table
+                ----------------------->
+                <div class="chart-legend"></div>
+                <div id="{{model.data.id}}-table" class="chart-table {{model.data.id}}-chart-element" style="margin-top:20px;padding-right:7px">
 
-        <!----------------------
-            Table
-        ----------------------->
-        <div id="{{model.data.id}}-table" class="chart-table {{model.data.id}}-chart-element" style="padding-right:7px">
+                    <table class="dynamicTable scrollVertical table table-primary dataTable" style="margin-right:7px;">
+                        <thead>
+                        <tr role="row" class="bg-primary">
+                            <th style="width:80px;"></th>
+                            <th
+                                    style="width:1px;white-space: nowrap;width__:{{ lbl[1].length*9}}px;"
+                                    ng-repeat="lbl in model.values.labels">{{lbl[1]|translate}}
+                            </th>
+                            <th></th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr role="row"  ng-repeat="serie in model.values.data" >
+                            <td  style="text-align:left" nowrap="nowrap">
+                                <div style="position:relative;top:5px;margin-right:5px;float:left;height:12px;width:12px;background:{{model.data.options.colors[$index]}}">
+                                </div>
+                                {{serie.label}}
+                            </td>
+                            <td align="right" ng-repeat="item in serie.data">{{item[1]| number:0}} {{model.data.unit}}</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
 
-            <table class="dynamicTable scrollVertical table table-primary dataTable" style="margin-right:7px;">
-                <thead>
-                <tr role="row">
-                    <th style="width:80px;"></th>
-                    <th style="width:{{100/(model.data.data.labels.length+1)}}%;"  ng-repeat="lbl in model.data.data.labels">{{lbl[1]|translate}}</th>
-                    <th></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr role="row"  ng-repeat="serie in model.data.data.series">
-                    <td  style="text-align:left" nowrap="nowrap">
-                        <div style="margin-right:5px;float:left;height:12px;width:12px;background:{{model.data.colors[$index]}}">
-                        </div>
-                        {{serie.label}}
-                    </td>
-                    <td ng-repeat="item in serie.data">{{item[1]| number:0}} {{model.data.unit}}</td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>
+                </div>
 
+                </div>
         </div>
     </div>
 </div>

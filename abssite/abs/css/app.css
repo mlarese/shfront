@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif,"Source Sans Pro";
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   line-height: 1.42857143;
@@ -2661,6 +2661,25 @@ fieldset[disabled] .i-checks input + i:before {
 
 /*Charts*/
 
+
+.dataTable   {
+    _border: 1px solid silver;
+}
+.dataTable > thead > tr > th {
+    text-align:center;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 4px 10px;
+    border-right:1px solid silver;
+    min-width: 80px;
+}
+
+.dataTable > tbody > tr > td, .dataTable > tfoot > tr > td {
+    padding: 3px 10px;
+    _border-right:1px solid silver;
+}
+
+
 .jqstooltip {
   max-height: 12px;
   padding: 5px 10px !important;
@@ -5187,4 +5206,27 @@ a.text-#000000:hover {
   99.9% {
     background-color: #7266ba;
   }
+}
+
+.row-merge {
+    margin: 0 !important;
+}
+.row-merge {
+    position: relative;
+}
+.row-merge {
+    margin: 0 !important;
+}
+.filter-header-collapsed{
+    font-size: 16px;
+    padding:3px 0 1px;
+
+}
+
+.bg-primary {
+    background-color: #428bca;
+    color: #fff;
+}
+.bg-gray {
+    background: #f9f9f9 none repeat scroll 0 0 !important;
 }

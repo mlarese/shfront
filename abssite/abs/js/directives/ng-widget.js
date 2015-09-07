@@ -29,6 +29,8 @@ angular.module('app')
                     if(dispatchedMessage.widgetData)
                         values=dispatchedMessage.widgetData ;
                     if(!$scope.model) $scope.model={};
+
+
                     $scope.model.values = values;
 
                 },

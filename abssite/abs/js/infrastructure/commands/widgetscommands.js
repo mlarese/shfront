@@ -38,9 +38,13 @@ commangular.command(ACTIONS_COMMANDS.COM_WIDGETS_LOAD_ALL,function(WidgetSrv){
  *      param  widgetId  The id of the widget
  *      return the widget data;
  *********************************************************/
-commangular.command(ACTIONS_COMMANDS.COM_WIDGETS_LOAD_DATA,function(DataSrv){
+commangular.command(ACTIONS_COMMANDS.COM_WIDGETS_LOAD_DATA,function(DataSrv,DataServiceTransform){
     return { execute:function($log,widgetId) {
-        return  DataSrv.load(widgetId);
+        return  DataSrv.load(widgetId)
+            .then(function(data){
+                data=DataServiceTransform.dataToPivotData(data);
+                return data;
+            });
     }}
 },{resultKey:'widgetData'})
 

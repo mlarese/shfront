@@ -1,9 +1,9 @@
-<div ng-class="{widget:true }" style="margin-bottom:8px" >
-    <div ng-class="{row:true , 'row-merge':true}">
-        <div class="col-sm-4" ng-repeat="item in $root.dateFilterDefinitions.items">
-            <div id="{{item.id}}" class="bg-primary">
+<div class="panel no-border" >
+
+        <div class="col-sm-4 " ng-repeat="item in $root.dateFilterDefinitions.items">
+            <div id="{{item.id}}" class=" bg-white text-dark   " style=" padding: 1px 6px 4px 8px;">
                 <h5 style="cursor:pointer;margin:0px 10px !important;" ng-click="$root.dateFilterDefinitions.expanded=true;" class="filter-header-collapsed  align-center innerAll half   border-bottom-none margin-none  " ng-if="!$root.dateFilterDefinitions.expanded">
-                    <b>{{item.title|translate}}</b>
+                     <b>{{item.title|translate }}</b>
                     <div   class="filter-header-collapsed">
                         <span class="filter-header-collapsed">{{$root.dashBoardFilter[item.type+'YearFrom'] }}</span>
                         <span class="filter-header-collapsed" ng-if="$root.dashBoardFilter[item.type+'YearFrom']!=$root.dashBoardFilter[item.type+'YearTo']">-{{$root.dashBoardFilter[item.type+'YearTo']}}</span>
@@ -13,9 +13,9 @@
 
                     </div>
                 </h5>
-                <h4 style="cursor:pointer;" ng-click="$root.dateFilterDefinitions.expanded=false;" ng-if="$root.dateFilterDefinitions.expanded" class="bg-primary align-center innerAll half border-bottom margin-none text-white ">{{item.title|translate}} </h4>
-                <div class="innerAll half bg-primary border-bottom" ng-if="$root.dateFilterDefinitions.expanded">
-                    <div class="media innerAll half margin-none text-white">
+                <h4 style="cursor:pointer;" ng-click="$root.dateFilterDefinitions.expanded=false;" ng-if="$root.dateFilterDefinitions.expanded" class=" text-dark-lt   bg-white align-center innerAll half border-bottom margin-none text-dark-lt ">{{item.title|translate}} </h4>
+                <div class="innerAll half text-dark   bg-white border-bottom" ng-if="$root.dateFilterDefinitions.expanded">
+                    <div class="media innerAll half margin-none text-dark-lt">
                         <div class="pull-left">
                             <i class="fa fa-fw fa-calendar fa-3x "></i>
                         </div>
@@ -41,8 +41,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
-    </div>
+
 
 </div>
