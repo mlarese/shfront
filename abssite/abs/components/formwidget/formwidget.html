@@ -1,0 +1,8 @@
+<div class="panel panel-primary" ng-cloak="">
+    <div class="panel-heading">
+        <i ng-if="model.data.titleIcon" class="fa {{model.data.titleIcon}}" style="margin-right:4px"></i> {{model.data.title|translate|uppercase}}
+    </div>
+    <div class="panel-body" style="overflow:auto;height: {{model.data.height}}px">
+        <div ng-include=""></div>
+    </div>
+</div>

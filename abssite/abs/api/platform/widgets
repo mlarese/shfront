@@ -21,6 +21,16 @@
         }
     },
 
+    "reservation":{
+        "code": "reservation",
+        "type": "formwidget",
+        "structure":{
+            "title": "Reservation detail",
+            "height":270,
+            "titleIcon":"fa-book"
+        }
+    },
+
     "avgrevbook":{
         "code": "avgrevbook",
         "type": "progresswidget",

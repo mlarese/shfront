@@ -11,7 +11,7 @@ var AppCtrl = function ($rootScope,$state, $scope, $translate, $timeout, $localS
 
     // config
     var app = {
-        name: 'Abs panel',
+        name: 'Abs hub',
         version: '0.0.1',
         // for chart colors
         color: {

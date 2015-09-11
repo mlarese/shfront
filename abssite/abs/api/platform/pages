@@ -7,8 +7,8 @@
             "title":"Home"
         },
         "widgets":[
-
-            {"code":"lastreservations","width":"wide","position":"3"}
+            {"code":"lastreservations","width":"large","position":"3"},
+            {"code":"reservation","width":"small","position":"3"}
         ]
    },
 
