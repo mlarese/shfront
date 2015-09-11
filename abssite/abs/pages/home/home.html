@@ -1,23 +1,14 @@
 <div class="innerLR" ng-controller="HomeCtrl" >
     <div style="padding-top: 10px">
+
         <div class="row">
-            <!--------------------------------------------------------
-                    Left column
-            --------------------------------------------------------->
             <div class="col-md-{{app.pages.home.leftColumns}}"  >
                 <div  ng-repeat="widget in app.pages.home.widgets" class="col-md-{{facilities.sizeToColumns(widget.width)}}"   >
                     <div ng-widget ng-name="{{widget.code}}" />
                 </div>
-
-
-                <div ng-widget ng-name="daterange"></div>
-
             </div>
-
-
-
-
-
         </div>
+
+
     </div>
 </div>

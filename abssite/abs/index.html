@@ -17,10 +17,11 @@
     <link rel="stylesheet" href="../libs/jquery/noui-slider/jquery.nouislider.pips.min.css" />
 
 
+    <link rel="stylesheet" href="css/admin.min.css" type="text/css" />
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script >
-        //var tmpEndpointUri = '/shfront/abssite/abs/api';
-        var tmpEndpointUri = '//shcore.mm-one.com.stg';
+        var tmpEndpointUri = '/shfront/abssite/abs/api';
+        //var tmpEndpointUri = '//shcore.mm-one.com.stg';
         //var tmpEndpointUri = '//shcore.mm-one.com.local';
         //jndi
         var jndi ={
@@ -41,7 +42,7 @@
         };
     </script>
 </head>
-<body ng-controller="AppCtrl">
+<body ng-controller="AppCtrl" ng-cloak="">
   <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed,'app-header-hidden':!app.settings.headerVisible, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-hidden':!app.settings.asideVisible,'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container,'container-wide':app.settings.wide}" ui-view></div>
   <!-- jQuery -->
   <script src="../libs/jquery/jquery/dist/jquery.js"></script>

@@ -1,9 +1,20 @@
-<div class="panel no-border" >
+<div class="  no-border">
+    <div class="row">
+        <div class="col-sm-4 " ng-class="{'no-paddings':$middle,'no-left-padding':$last,'no-right-padding':$first}" ng-repeat="item in $root.dateFilterDefinitions.items">
 
-        <div class="col-sm-4 " ng-repeat="item in $root.dateFilterDefinitions.items">
-            <div id="{{item.id}}" class=" bg-white text-dark   " style=" padding: 1px 6px 4px 8px;">
-                <h5 style="cursor:pointer;margin:0px 10px !important;" ng-click="$root.dateFilterDefinitions.expanded=true;" class="filter-header-collapsed  align-center innerAll half   border-bottom-none margin-none  " ng-if="!$root.dateFilterDefinitions.expanded">
-                     <b>{{item.title|translate }}</b>
+            <div
+                id="{{item.id}}"
+                ng-class="{'bg-white':$root.dateFilterDefinitions.expanded,'bg-primary':!$root.dateFilterDefinitions.expanded}"
+                class=" widget  "
+                style="border-bottom:0px solid #d1d1d1;padding: 0 0 2px "
+            >
+
+                <h5 style="font-size:16px;cursor:pointer;position: relative; top: 2px;left:22px"
+                    ng-click="$root.dateFilterDefinitions.expanded=true;"
+                    class="filter-header-collapsed text-white align-center   half   border-bottom-none margin-none "
+                    ng-if="!$root.dateFilterDefinitions.expanded">
+
+                    <b>{{item.title|translate }}</b>
                     <div   class="filter-header-collapsed">
                         <span class="filter-header-collapsed">{{$root.dashBoardFilter[item.type+'YearFrom'] }}</span>
                         <span class="filter-header-collapsed" ng-if="$root.dashBoardFilter[item.type+'YearFrom']!=$root.dashBoardFilter[item.type+'YearTo']">-{{$root.dashBoardFilter[item.type+'YearTo']}}</span>
@@ -13,35 +24,50 @@
 
                     </div>
                 </h5>
-                <h4 style="cursor:pointer;" ng-click="$root.dateFilterDefinitions.expanded=false;" ng-if="$root.dateFilterDefinitions.expanded" class=" text-dark-lt   bg-white align-center innerAll half border-bottom margin-none text-dark-lt ">{{item.title|translate}} </h4>
-                <div class="innerAll half text-dark   bg-white border-bottom" ng-if="$root.dateFilterDefinitions.expanded">
-                    <div class="media innerAll half margin-none text-dark-lt">
-                        <div class="pull-left">
-                            <i class="fa fa-fw fa-calendar fa-3x "></i>
-                        </div>
-                        <div class="media-body" style="padding:0px">
-                            <p class="strong lead  margin-none" style="font-size:16px">
-                                <span>{{$root.dashBoardFilter[item.type+'YearFrom'] }}</span>
-                                <span ng-if="$root.dashBoardFilter[item.type+'YearFrom']!=$root.dashBoardFilter[item.type+'YearTo']"> - {{$root.dashBoardFilter[item.type+'YearTo']}}</span>
-                            </p>
-                            <p class="strong    margin-none">
-                                <span>{{  $root.months[$root.dashBoardFilter[item.type+'MonthFrom'] -1 ] |translate}}</span>
-                                <span ng-if="$root.dashBoardFilter[item.type+'MonthFrom']!=$root.dashBoardFilter[item.type+'MonthTo']"> - {{$root.months[$root.dashBoardFilter[item.type+'MonthTo']-1 ]|translate }}</span>
-                            </p>
+
+
+
+                <div class="bg-primary" style="margin-bottom: 0px;">
+                    <h4 style="cursor:pointer;margin-top:0; padding:6px;border-bottom:1px solid white;font-size: 20px;"
+                        ng-click="$root.dateFilterDefinitions.expanded=false;"
+                        ng-if="$root.dateFilterDefinitions.expanded" class="bg-primary align-center innerAll half border-bottom margin-none text-white ">
+                        {{item.title|translate}}
+                    </h4>
+
+                    <div class="innerAll half text-white  border-bottom" ng-if="$root.dateFilterDefinitions.expanded">
+                        <div class="media innerAll half margin-none text-light-blue">
+
+                                <div class="pull-left text-white">
+                                    <i class="fa fa-fw fa-calendar fa-3x "></i>
+                                </div>
+                                <div class="media-body text-white" style="padding:0px">
+                                    <p class="strong" style="font-size:16px;margin:0">
+                                        <span>{{$root.dashBoardFilter[item.type+'YearFrom'] }}</span>
+                                        <span ng-if="$root.dashBoardFilter[item.type+'YearFrom']!=$root.dashBoardFilter[item.type+'YearTo']"> - {{$root.dashBoardFilter[item.type+'YearTo']}}</span>
+                                    </p>
+                                    <p class="strong    margin-none">
+                                        <span>{{  $root.months[$root.dashBoardFilter[item.type+'MonthFrom'] -1 ] |translate}}</span>
+                                        <span ng-if="$root.dashBoardFilter[item.type+'MonthFrom']!=$root.dashBoardFilter[item.type+'MonthTo']"> - {{$root.months[$root.dashBoardFilter[item.type+'MonthTo']-1 ]|translate }}</span>
+                                    </p>
+                                </div>
+
                         </div>
                     </div>
                 </div>
-                <div class="innerAll half bg-gray "  ng-if="$root.dateFilterDefinitions.expanded">
-                    <div class="media innerAll half margin-none">
-                        <div class="media-body" style="padding:0 14px 13px 14px">
-                            <div dateslider  ng-from="$root.dashBoardFilter[item.type+'YearFrom']"   ng-to="$root.dashBoardFilter[item.type+'YearTo']"  ></div>
-                            <div style="height:20px;"></div>
-                            <div dateslider type="month"  ng-from="$root.dashBoardFilter[item.type+'MonthFrom']"   ng-to="$root.dashBoardFilter[item.type+'MonthTo']"  ></div>
+                <div style="padding: 0 11px">
+                    <div style="margin-top: 11px;" class="innerAll half bg-gray "  ng-if="$root.dateFilterDefinitions.expanded">
+                        <div class="media innerAll half margin-none">
+                            <div class="media-body" style="padding:0 14px 13px 14px">
+                                <div dateslider  ng-from="$root.dashBoardFilter[item.type+'YearFrom']"   ng-to="$root.dashBoardFilter[item.type+'YearTo']"  ></div>
+                                <div style="height:20px;"></div>
+                                <div dateslider type="month"  ng-from="$root.dashBoardFilter[item.type+'MonthFrom']"   ng-to="$root.dashBoardFilter[item.type+'MonthTo']"  ></div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
-
+    </div>
 
 </div>

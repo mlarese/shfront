@@ -1,15 +1,16 @@
 {
 
     "home":{
-            "code":"home",
-            "template":"home",
-            "structure":{
-                "title":"Home"
-            },
-            "widgets":[
-                {"code":"dashboardlist","width":"small","position":"3"}
-            ]
-       },
+        "code":"home",
+        "template":"home",
+        "structure":{
+            "title":"Home"
+        },
+        "widgets":[
+
+            {"code":"lastreservations","width":"wide","position":"3"}
+        ]
+   },
 
     "single":{
         "code":"single",

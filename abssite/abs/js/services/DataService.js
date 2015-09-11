@@ -1,4 +1,11 @@
-var DataService= function ($resource,ENDPOINT_URI,$cacheFactory) {
+/**
+ * Filters endpoint
+ * set
+ * shcore.mm-one.com.stg/bi/filter/xxxxx/vvvv
+ * get
+ * http://shcore.mm-one.com.stg/bi/filters
+ */
+var DataService= function ($resource,ENDPOINT_URI,ENDPOINT_URI_ORIGIN,$cacheFactory) {
     var path='/bi/data/byname',
         endPoint= ENDPOINT_URI+path,
         /**
@@ -14,12 +21,15 @@ var DataService= function ($resource,ENDPOINT_URI,$cacheFactory) {
                     return null;
                 }
             )
-        }
+        },
+        resource;
+
+
         resource=$resource(
             endPoint+'/:id',
             { id:'@_id'},
             {
-                query:{ method: 'GET', isArray: false ,cache : $cacheFactory(endPoint) },
+                query:{ method: 'GET', isArray: false ,cache : false },
                 update: { method: 'PUT' }
             }
         ) ;

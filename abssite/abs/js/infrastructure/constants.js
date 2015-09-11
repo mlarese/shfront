@@ -34,6 +34,8 @@ const ACTIONS_COMMANDS = {
     CHAIN_COM_WIDGETS_SHOW:'widgets.show',
     CHAIN_COM_LOAD_ALL_MENU_AND_PAGES:'menu.pages.load.all',
     CHAIN_COM_LOAD_ROUTE:'load.route',
+    RAISE_GLOBAL_EVENT:'raise.global.event',
+    RECORD_SELECTED:'record.selected',
     RAISE_EVENT:'raise.event'
 }
 

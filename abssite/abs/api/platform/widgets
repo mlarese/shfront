@@ -1,4 +1,26 @@
 {
+    "lastreservations":{
+        "code": "lastreservations",
+        "type": "tablewidget",
+        "structure":{
+           "title": "Last reservations",
+           "height":270,
+           "titleIcon":"fa-book",
+           "rowIcon":"fa-edit",
+           "columns":[
+                {"field":"reservation_open_date","header":"Date","width":30,"align":"center"}
+                ,{"field":"reservation_surname","header":"Surname","width":100,"align":"left"}
+                ,{"field":"reservation_name","header":"Name","width":100,"align":"left"}
+                ,{"field":"reservation_channel","header":"Channel","width":100,"align":"left"}
+                ,{"field":"reservation_checkin","header":"Checkin","width":30,"align":"center"}
+                ,{"field":"reservation_checkout","header":"Checkout","width":30,"align":"center"}
+                ,{"field":"reservation_pax","header":"Pax","width":10,"align":"right"}
+                ,{"field":"reservation_room_type","header":"Room","width":90,"align":"left"}
+                ,{"field":"reservation_note","header":"Note","width":80,"align":"left"}
+           ]
+        }
+    },
+
     "avgrevbook":{
         "code": "avgrevbook",
         "type": "progresswidget",

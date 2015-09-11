@@ -1,0 +1,31 @@
+<div class="panel panel-primary" ng-cloak="">
+    <div class="panel-heading">
+        <i ng-if="model.data.titleIcon" class="fa {{model.data.titleIcon}}" style="margin-right:4px"></i> {{model.data.title|translate|uppercase}}
+    </div>
+
+    <div class="table-responsive" style="height: {{model.data.height}}px">
+        <table class="table table-striped b-t b-light">
+            <thead>
+            <tr>
+                <th ng-repeat="column in model.data.columns"  >{{column.header|translate|uppercase}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="reservation in model.values.lastreservations" ng-click="dispatch('record.selected',{source:model.data.id,record:reservation})">
+                <td
+                        ng-repeat="column in model.data.columns"
+                        align="{{column.align}}"
+                        width="{{column.width}}"
+                        style="white-space: nowrap"
+                >
+                    <i ng-if="model.data.rowIcon && $first" class="fa {{model.data.rowIcon}}" style="margin-right:4px"></i>
+                    {{reservation[column.field]}}
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
+
+    </div>
+
+</div>

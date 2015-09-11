@@ -25,7 +25,7 @@ angular.module('app')
             tmhDynamicLocale.set('it');
 
   })
-  .run(function( $rootScope ){
+  .run(function( $rootScope ,$log,$timeout){
         var today=new Date(),
             curYear=today.getFullYear(),
             year3Ago=curYear-2;
@@ -33,12 +33,13 @@ angular.module('app')
         $rootScope.dateFilterDefinitions= {
             expanded:false,
                 items: [
-                {id: 'fltbyopendate', title: 'Open Date', type: 'open'}
-                , {id: 'fltbycheckindate', title: 'Checkin Date', type: 'checkin'}
-                , {id: 'fltbycheckoutdate', title: 'Checkout Date', type: 'checkout'}
+                 {id: 'fltbyopendate', title: 'Open Date', type: 'open'}
+                ,{id: 'fltbycheckindate', title: 'Checkin Date', type: 'checkin'}
+                ,{id: 'fltbycheckoutdate', title: 'Checkout Date', type: 'checkout'}
             ]
         };
 
+        $rootScope.months =['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         $rootScope.dashBoardFilter={
             structure: null
             ,checkinYearFrom: year3Ago
@@ -62,5 +63,25 @@ angular.module('app')
             ,openDateFrom: year3Ago + '-01-01'
             ,openDateTo: curYear + '-12-31'
         };
+
+        var filterHandler=null;
+        $rootScope.$watch('currentStructure', function(structureObj, oldStructureObj) {
+            $log.info("$rootScope.emit.filter.current.structure.changed");
+            $rootScope.$emit('filter.current.structure.changed',structureObj);
+        });
+
+        $rootScope.$watchCollection('dashBoardFilter', function(newValue, oldValue) {
+            if(filterHandler) $timeout.cancel(filterHandler);
+            filterHandler= $timeout( function(){
+                $log.info("$rootScope.emit.filter.basic.changed");
+                $rootScope.$emit('filter.basic.changed',$rootScope.dashBoardFilter);
+            } ,400)
+
+        });
+
+        $rootScope.$on('filter.current.structure.changed',function(event,structureObj){
+            $log.info("$rootScope.on.filter.current.structure.changed");
+            $rootScope.dashBoardFilter.structure=structureObj;
+        });
 
   });

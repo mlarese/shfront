@@ -56,3 +56,21 @@ commangular.command(EV_WIDGETS_RELOAD  ,function() {
         }
     }
 })
+
+commangular.command(ACTIONS_COMMANDS.RAISE_GLOBAL_EVENT  ,function() {
+    return {
+        execute: function ($log,$rootScope,eventName) {
+            $log.info("raise.global.event="+eventName)
+            //$rootScope.$emit(EV_WIDGETS_RELOAD,widgetId);
+        }
+    }
+})
+
+commangular.command(ACTIONS_COMMANDS.RECORD_SELECTED  ,function() {
+    return {
+        execute: function ($log,$rootScope,source,record) {
+            $log.info("record.selected="+source)
+            //$rootScope.$emit(EV_WIDGETS_RELOAD,widgetId);
+        }
+    }
+})

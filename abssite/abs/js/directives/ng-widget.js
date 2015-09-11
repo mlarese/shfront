@@ -70,6 +70,7 @@ angular.module('app')
                         options = response.chartConfig;
                         optionsName = widget.graphic.options;
                     }
+
                     if(widget){
                         var widgetStructure ={id:widget.code,type:widget.type,options:options,optionsName:optionsName};
                         angular.extend(widgetStructure,widget.structure);
