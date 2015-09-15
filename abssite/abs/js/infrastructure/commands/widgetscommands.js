@@ -69,8 +69,7 @@ commangular.command(ACTIONS_COMMANDS.RAISE_GLOBAL_EVENT  ,function() {
 commangular.command(ACTIONS_COMMANDS.RECORD_SELECTED  ,function() {
     return {
         execute: function ($log,$rootScope,source,record) {
-            $log.info("record.selected="+source)
-            //$rootScope.$emit(EV_WIDGETS_RELOAD,widgetId);
+            $rootScope.$emit('record.selected.'+source,record);
         }
     }
 })

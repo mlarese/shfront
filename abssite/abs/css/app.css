@@ -436,7 +436,7 @@ a.list-group-item.hover {
 }
 
 .panel-heading {
-  border-radius: 2px 2px 0 0;
+  border-radius: 4px 4px 0 0;
 }
 
 .panel-default .panel-heading {
@@ -487,7 +487,7 @@ a.list-group-item.hover {
 }
 
 .table-bordered {
-  border-color: #eaeff0;
+  border-color: #dfdfdf;
 }
 
 .table-bordered > tbody > tr > td {
@@ -1211,7 +1211,7 @@ html.bg {
 }
 
 .navi ul.nav li li a {
-  padding-left: 55px;
+  padding-left: 35px;
 }
 
 .navi ul.nav li li ul {
@@ -3513,7 +3513,7 @@ fieldset[disabled] .i-checks input + i:before {
 
 .bg-warning {
   color: #fffefa;
-  background-color: #fad733;
+  background-color: LightCoral;
 }
 
 .bg-warning.lt,
@@ -4204,8 +4204,10 @@ a.text-#000000:hover {
 }
 
 .wrapper-md {
-  padding: 20px;
+    padding: 10px 0 25px;
 }
+
+
 
 .wrapper-lg {
   padding: 30px;
@@ -4708,6 +4710,10 @@ a.text-#000000:hover {
   margin-bottom: -50px;
 }
 
+tr.row-selected{
+    border-left:3px solid gray;
+}
+
 .avatar {
   position: relative;
   display: block;
@@ -4720,7 +4726,15 @@ a.text-#000000:hover {
   border-radius: 500px;
 }
 
+.avatar span.fa{
+  border-radius: 500px;
+  line-height: 62px;
+  width: 70%;
+}
+
 .avatar i {
+  border-radius: 500px;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -5362,4 +5376,15 @@ a.text-#000000:hover {
 
 .panel {
     border-radius: 5px;
+}
+
+h6, .h6 {
+    font-size: 13px;
+}
+
+.dataTable_ .scroller {
+    white-space: pre-line;
+    height: 280px;
+    overflow-y: hidden;
+    position: relative;
 }

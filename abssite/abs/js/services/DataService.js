@@ -26,7 +26,7 @@ var DataService= function ($resource,ENDPOINT_URI,ENDPOINT_URI_ORIGIN,$cacheFact
 
 
         resource=$resource(
-            endPoint+'/:id',
+            endPoint+'/:id?v=1.0.1',
             { id:'@_id'},
             {
                 query:{ method: 'GET', isArray: false ,cache : false },

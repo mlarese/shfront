@@ -1,10 +1,12 @@
-<div class="tablewidget panel panel-primary" ng-cloak="" >
-    <div class="panel-heading no-margins">
-        <i ng-if="model.data.titleIcon" class="fa {{model.data.titleIcon}}" style="margin-right:4px"></i> {{model.data.title|translate|uppercase}}
+<div class="tablewidget panel" ng-cloak=""  style="height:{{facilities.heightToPixel('x1')}}px">
+    <div class="panel-heading no-margins  {{model.data.bgClass?model.data.bgClass:'bg-info'}}" style="min-height:20px">
+        <span ng-if="model.data.title">
+            <i ng-if="model.data.titleIcon" class="fa {{model.data.titleIcon}}" style="margin-right:4px"></i> {{model.data.title|translate|uppercase}}
+        </span>
     </div>
 
-    <div class="panel-body" style="padding:0;overflow:auto;height: {{model.data.height}}px">
-        <div class="table-responsive" >
+    <div class="panel-body" style="padding:0;overflow-y:auto;height:80%">
+
             <table class="table table-striped b-t b-light">
                 <thead>
                 <tr>
@@ -12,21 +14,30 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="reservation in model.values.lastreservations" ng-click="dispatch('record.selected',{source:model.data.id,record:reservation})">
+                <tr ng-repeat="item in model.values.items"
+                    ng-init="item._rowindex=$index"
+                    ng-click="
+                        dispatch(model.data.onRowSelect,
+                            {source:model.data.broadcast,record:item}
+                        );
+                        model.data._curRow=$index;"
+                    ng-class="{'row-selected':(model.data._curRow==item._rowindex)}"
+                >
                     <td
                             ng-repeat="column in model.data.columns"
                             align="{{column.align}}"
                             width="{{column.width}}"
                             style="white-space: nowrap"
-                            >
-                        <i ng-if="model.data.rowIcon && $first" class="fa {{model.data.rowIcon}}" style="margin-right:4px"></i>
-                        {{reservation[column.field]}}
+
+                     >
+                        <i ng-if="model.data.rowIcon && $first" class="fa {{model.data.rowIcon}}" style="margin-right:4px"> </i>
+                        {{item[column.field]}}
                     </td>
                 </tr>
 
                 </tbody>
             </table>
-        </div>
+
     </div>
 
 </div>

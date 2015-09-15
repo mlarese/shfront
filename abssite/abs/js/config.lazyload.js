@@ -42,7 +42,6 @@ var  _JQ_CONFIG_={
                         '../libs/jquery/bootstrap-daterangepicker/daterangepicker-bs3.css'],
     tagsinput:      [   '../libs/jquery/bootstrap-tagsinput/dist/bootstrap-tagsinput.js',
                         '../libs/jquery/bootstrap-tagsinput/dist/bootstrap-tagsinput.css']
-
 };
 
 var _PG_CONFIG_ = {
@@ -53,7 +52,8 @@ var _PG_CONFIG_ = {
 angular.module('app')
   .constant('APP_CONFIG',window.jndi)
   .constant('WIDGET_CONFIG',{
-        widgetSize: {xsmall:3,small:4,medium:6,large:8,xlarge:9,full:12}
+        widgetSize: {xsmall:3,small:4,medium:6,large:8,xlarge:9,full:12},
+        widgetHeight: {x1:270,x2:270*2,x3:270*3}
   })
   .constant('PG_CONFIG',_PG_CONFIG_)
   .constant('JQ_CONFIG',_JQ_CONFIG_)

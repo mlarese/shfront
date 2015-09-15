@@ -1,12 +1,90 @@
 {
+    "reservationtodaydepartures":{
+            "code": "reservationtodaydepartures",
+            "type": "tablewidget",
+            "structure":{
+               "bgClass":"bg-warning",
+               "autoLoad":true,
+               "title": "Today departures",
+               "height":300,
+               "titleIcon":"fa-plane",
+               "rowIcon":"fa-edit",
+               "broadcast":"today.departure.selected",
+               "onRowSelect":"record.selected",
+               "columns":[
+                    {"field":"reservation_surname","header":"Surname","width":100,"align":"left"}
+                    ,{"field":"reservation_name","header":"Name","width":100,"align":"left"}
+                    ,{"field":"reservation_channel","header":"Channel","width":100,"align":"left"}
+                    ,{"field":"reservation_room_type","header":"Room","width":90,"align":"left"}
+                    ,{"field":"reservation_note","header":"Note","width":120,"align":"left"}
+               ]
+            }
+        },
+        "reservationtodaydeparture":{
+            "code": "reservationtodaydepartures",
+            "type": "formwidget",
+            "structure":{
+                "bgClass":"bg-warning",
+                "autoLoad":false,
+                "template":"reservation",
+                "title": "Today departure detail",
+                "height":"x1",
+                "titleIcon":"fa-plane",
+                "config":{
+                   "events":{ "record.selected":"today.departure.selected" }
+                }
+            }
+    
+        },
+    
+    "reservationtodayarrivals":{
+        "code": "reservationtodayarrivals",
+        "type": "tablewidget",
+        "structure":{
+           "bgClass":"bg-success",
+           "autoLoad":true,
+           "title": "Today arrivals",
+           "height":300,
+           "titleIcon":"fa-calendar-o",
+           "rowIcon":"fa-edit",
+           "broadcast":"today.arrival.selected",
+           "onRowSelect":"record.selected",
+           "columns":[
+                {"field":"reservation_surname","header":"Surname","width":100,"align":"left"}
+                ,{"field":"reservation_name","header":"Name","width":100,"align":"left"}
+                ,{"field":"reservation_channel","header":"Channel","width":100,"align":"left"}
+                ,{"field":"reservation_room_type","header":"Room","width":90,"align":"left"}
+                ,{"field":"reservation_note","header":"Note","width":120,"align":"left"}
+           ]
+        }
+    },
+    "reservationtodayarrival":{
+        "code": "reservationtodayarrivals",
+        "type": "formwidget",
+        "structure":{
+            "bgClass":"bg-success",
+            "autoLoad":false,
+            "template":"reservation",
+            "title": "Today arrival detail",
+            "height":"x1",
+            "titleIcon":"fa-calendar-o",
+            "config":{
+               "events":{ "record.selected":"today.arrival.selected" }
+            }
+        }
+
+    },
     "lastreservations":{
         "code": "lastreservations",
         "type": "tablewidget",
         "structure":{
+           "autoLoad":true,
            "title": "Last reservations",
-           "height":270,
+           "height":"x1",
            "titleIcon":"fa-book",
            "rowIcon":"fa-edit",
+           "broadcast":"last.reservation.selected",
+           "onRowSelect":"record.selected",
            "columns":[
                 {"field":"reservation_open_date","header":"Date","width":30,"align":"center"}
                 ,{"field":"reservation_surname","header":"Surname","width":100,"align":"left"}
@@ -16,25 +94,32 @@
                 ,{"field":"reservation_checkout","header":"Checkout","width":30,"align":"center"}
                 ,{"field":"reservation_pax","header":"Pax","width":10,"align":"right"}
                 ,{"field":"reservation_room_type","header":"Room","width":90,"align":"left"}
-                ,{"field":"reservation_note","header":"Note","width":80,"align":"left"}
+
            ]
         }
     },
 
-    "reservation":{
-        "code": "reservation",
+    "lastreservation":{
+        "code": "lastreservation",
         "type": "formwidget",
         "structure":{
+            "autoLoad":false,
+            "template":"reservation",
             "title": "Reservation detail",
-            "height":270,
-            "titleIcon":"fa-book"
+            "height":"x1",
+            "titleIcon":"fa-book",
+            "config":{
+               "events":{ "record.selected":"last.reservation.selected" }
+            }
         }
+
     },
 
     "avgrevbook":{
         "code": "avgrevbook",
         "type": "progresswidget",
         "structure":{
+           "autoLoad":true,
            "title": "Average revenue",
            "text": "Bookings",
            "config":{
@@ -56,6 +141,7 @@
        "code": "totrevxpaxseg",
        "type": "chartwidget",
        "structure":{
+           "autoLoad":true,
            "title": "Total Revenue x Pax Segment",
            "config":{
                "events":{
@@ -79,20 +165,21 @@
        "code": "totrevxresmon3ys",
        "type": "chartwidget",
        "structure":{
-               "title": "Total Revenue x Reservation Month - 3 Years Statement",
-               "config":{
-                   "events":{
-                       "reload":[
-                          "ev.general.filter.change.checkout.date",
-                          "ev.general.filter.change.checkin.date",
-                          "ev.general.filter.change.opened.date"
-                       ]
-                   }
+            "autoLoad":true,
+            "title": "Total Revenue x Reservation Month - 3 Years Statement",
+            "config":{
+               "events":{
+                   "reload":[
+                      "ev.general.filter.change.checkout.date",
+                      "ev.general.filter.change.checkin.date",
+                      "ev.general.filter.change.opened.date"
+                   ]
                }
-            }              ,
-            "context":"",
-            "graphic":{
-               "options":"stacked_bars"
             }
+       }              ,
+       "context":"",
+       "graphic":{
+           "options":"stacked_bars"
+       }
     }
 }

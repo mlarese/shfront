@@ -1,5 +1,5 @@
 {
-   "lastreservations":[
+   "items":[
       {
          "reservation_id":1,
          "reservation_pax":3,
@@ -8,7 +8,8 @@
          "reservation_checkout":"15/06/2015",
          "reservation_open_date":"12/05/2015",
          "reservation_surname":"Larese",
-         "reservation_name":"Mauro"
+         "reservation_name":"Mauro",
+         "reservation_note":"Possibilmente camera 204"
       },
       {
          "reservation_id":2,
@@ -18,7 +19,8 @@
          "reservation_checkout":"15/06/2015",
          "reservation_open_date":"12/05/2015",
          "reservation_surname":"Stasi",
-         "reservation_name":"Mario"
+         "reservation_name":"Mario",
+         "reservation_note":"Possibilmente camera 104"
       },
       {
          "reservation_id":3,
@@ -48,7 +50,9 @@
          "reservation_checkout":"15/06/2015",
          "reservation_open_date":"12/05/2015",
          "reservation_surname":"Rupet",
-         "reservation_name":"Mauro"
+         "reservation_name":"Mauro",
+         "reservation_note":"Arriva alle 19"
+
       },
       {
          "reservation_id":6,

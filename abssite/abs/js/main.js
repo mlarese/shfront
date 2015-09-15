@@ -80,4 +80,5 @@ angular.module('app')
     .constant('ENDPOINT_URI', window.jndi.resource.ENDPOINT_URI)
     .constant('ENDPOINT_URI_ORIGIN', window.jndi.resource.ENDPOINT_URI_ORIGIN)
     .constant('JSON_FILES_VERSION', "1.0.2")
-    .controller('AppCtrl',AppCtrl) ;
+    .controller('AppCtrl',AppCtrl)
+    .controller('EmptyCtrl_',function($scope,$log){ $log.info("EmptyCtrl") }) ;

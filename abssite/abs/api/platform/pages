@@ -8,7 +8,11 @@
         },
         "widgets":[
             {"code":"lastreservations","width":"large","position":"3"},
-            {"code":"reservation","width":"small","position":"3"}
+            {"code":"lastreservation","width":"small","position":"3"},
+            {"code":"reservationtodayarrivals","width":"large","position":"3"},
+            {"code":"reservationtodayarrival","width":"small","position":"3"},
+            {"code":"reservationtodaydepartures","width":"large","position":"3"},
+            {"code":"reservationtodaydeparture","width":"small","position":"3"}
         ]
    },
 

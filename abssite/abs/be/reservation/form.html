@@ -1,0 +1,26 @@
+<div class="text-left" style="min-height:60px">
+    <form>
+        <div ng-if="record">
+
+            <h6> <b>{{'Opened'|translate|uppercase}}</b> {{record.reservation_open_date}} ({{record.reservation_channel}})</h6>
+            <h6> <b>{{'Guest'|translate|uppercase}}</b> {{record.reservation_surname|uppercase}} {{record.reservation_name|uppercase}} </h6>
+            <h6> <b>{{'Check in'|translate|uppercase}} </b> {{record.reservation_checkin}}  </h6>
+            <h6> <b>{{'Check out'|translate}}</b> {{record.reservation_checkout}} </h6>
+
+            <div style="margin-top:10px">
+                <h6><b>{{'Note'|translate|uppercase}}</b></h6>
+                <div class="table-bordered borde" style="height:40px;margin-top:3px;padding:3px">
+                    {{record.reservation_note}}
+                </div>
+            </div>
+        </div>
+        <!-- record.reservation_id    {{record.reservation_id}}<br>
+        record.reservation_pax {{record.reservation_pax}}<br>
+        record.reservation_checkin {{record.reservation_checkin}}<br>
+        record.reservation_channel {{record.reservation_channel}}<br>
+        record.reservation_checkout {{record.reservation_checkout}}<br>
+        record.reservation_open_date {{record.reservation_open_date}}<br>
+        record.reservation_surname {{record.reservation_surname}}<br>
+        record.reservation_name {{record.reservation_name}}<br>-->
+    </form>
+</div>

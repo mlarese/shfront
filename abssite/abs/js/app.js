@@ -16,7 +16,6 @@ var app = angular.module('app', [
     'ui.jq',
     'oc.lazyLoad',
     'pascalprecht.translate',
-    'ngMaterial',
     'facilities',
     'commangular',
     //'blockUI' ,

@@ -70,6 +70,9 @@ angular.module('facilities', [])
                 },
                 sizeToColumns=function(size){
                     return WIDGET_CONFIG.widgetSize[size];
+                },
+                heightToPixel=function(height){
+                    return WIDGET_CONFIG.widgetHeight[height];
                 }
 
                 var fn = {
@@ -78,6 +81,7 @@ angular.module('facilities', [])
                     getByPath:getByPath,
                     init$localStorage:init$localStorage,
                     sizeToColumns:sizeToColumns,
+                    heightToPixel:heightToPixel,
                     initModule:initModule
                 };
 
