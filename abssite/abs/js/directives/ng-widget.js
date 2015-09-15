@@ -1,7 +1,7 @@
 
 angular.module('app')
 .directive('ngWidget', function($log,$rootScope,$commangular,$ocLazyLoad,$window,JQ_CONFIG,$timeout) {
-    var tempaltesVersion='1.0.1',
+    var tempaltesVersion='1.0.2',
         DirectiveNgWidget = function($scope){
             jndi.$scopes.widgets[$scope.ngName]=$scope;
             $scope.visibility='';

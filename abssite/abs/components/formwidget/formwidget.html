@@ -1,24 +1,10 @@
-<div class="panel" style="height:{{facilities.heightToPixel('x1')}}px">
-    <div class="panel-heading {{model.data.bgClass?model.data.bgClass:'bg-info'}}  no-border wrapper-md text-center font-bold  " >
-        {{model.data.title|translate|uppercase}}
-    </div>
-    <div class="text-center  clearfix">
-        <div class="thumb-lg avatar m-t-n-xxl">
-            <span ng-if="model.data.titleIcon" class="bg-white fa {{model.data.titleIcon}} fa-2x" ></span>
-        </div>
-    </div>
-    <div class="padder lter row text-center no-gutter pos-rlt" style="z-index:2">
-        <div ng-include="'be/'+model.data.template+'/form.html?v=1.0'"></div>
-    </div>
+<div class="panel b-a panel-default" style="height:{{facilities.heightToPixel('x1')}}px">
 
-    <!--div class="hbox text-center   b-light">
-        <a class="col padder-v text-muted b-r b-light" href="">
-            <div class="h4">5032</div>
-            <span>Posts</span>
-        </a>
-        <a class="col padder-v text-muted" href="">
-            <div class="h4">689</div>
-            <span>Photos</span>
-        </a>
-    </div-->
+    <div class="panel-heading pos-rlt b-b b-light">
+
+        <span class="text-muted-dark font-bold">{{model.data.title|translate|uppercase}}</span>
+
+    </div>
+    <div ng-include="'be/'+model.data.template+'/form.html?v=1.0'"></div>
+
 </div>

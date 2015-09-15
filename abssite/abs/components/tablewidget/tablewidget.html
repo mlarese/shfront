@@ -1,42 +1,53 @@
-<div class="tablewidget panel" ng-cloak=""  style="height:{{facilities.heightToPixel('x1')}}px">
-    <div class="panel-heading no-margins  {{model.data.bgClass?model.data.bgClass:'bg-info'}}" style="min-height:20px">
-        <span ng-if="model.data.title">
-            <i ng-if="model.data.titleIcon" class="fa {{model.data.titleIcon}}" style="margin-right:4px"></i> {{model.data.title|translate|uppercase}}
-        </span>
+<div class="panel panel-default tablewidget" style="height:{{facilities.heightToPixel('x1')}}px">
+    <div class="panel-heading" style=" padding: 0 15px 10px;height:60px">
+        <div class="clearfix">
+            <a class="pull-left thumb-md avatar b-3x m-r" href="">
+                <img alt="..." src="{{model.data.avatar}}?v=1.0.2"  >
+            </a>
+            <div class="clear">
+
+                <div class="h5 m-t-md m-b-xs">
+                    <span class="text-muted" ng-if="model.data.title">
+                        {{model.data.title|translate|uppercase}}
+                    </span>
+                </div>
+                <!-- small class="text-muted">{{'List'|translate}}</small -->
+            </div>
+        </div>
     </div>
 
-    <div class="panel-body" style="padding:0;overflow-y:auto;height:80%">
+    <div class="panel-body" custom-scrollbar="" style="width:100%;padding:0;height:{{facilities.heightToPixel('x1')-64}}px;position:relative">
 
-            <table class="table table-striped b-t b-light">
-                <thead>
+        <table class="table table-striped b-t b-light" style="width:100%">
+            <thead >
                 <tr>
-                    <th ng-repeat="column in model.data.columns"  >{{column.header|translate|uppercase}}</th>
+                    <th ng-repeat="column in model.data.columns" width="{{column.width}}"  >{{column.header|translate|uppercase}}</th>
                 </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="item in model.values.items"
-                    ng-init="item._rowindex=$index"
-                    ng-click="
-                        dispatch(model.data.onRowSelect,
-                            {source:model.data.broadcast,record:item}
-                        );
-                        model.data._curRow=$index;"
+            </thead>
+            <tbody>
+            <tr ng-repeat="item in model.values.items"
+                ng-init="item._rowindex=$index"
+                ng-click="
+                    dispatch(model.data.onRowSelect,
+                        {source:model.data.broadcast,record:item}
+                    );
+                    model.data._curRow=$index;"
                     ng-class="{'row-selected':(model.data._curRow==item._rowindex)}"
-                >
-                    <td
-                            ng-repeat="column in model.data.columns"
-                            align="{{column.align}}"
-                            width="{{column.width}}"
-                            style="white-space: nowrap"
+                    >
+                <td
+                        ng-repeat="column in model.data.columns"
+                        align="{{column.align}}"
+                        width="{{column.width}}"
+                        style="white-space: nowrap"
 
-                     >
-                        <i ng-if="model.data.rowIcon && $first" class="fa {{model.data.rowIcon}}" style="margin-right:4px"> </i>
-                        {{item[column.field]}}
-                    </td>
-                </tr>
+                        >
+                    <i ng-if="model.data.rowIcon && $first" class="fa {{model.data.rowIcon}}" style="margin-right:4px"> </i>
+                    {{item[column.field]}}
+                </td>
+            </tr>
 
-                </tbody>
-            </table>
+            </tbody>
+        </table>
 
     </div>
 

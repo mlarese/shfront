@@ -42,8 +42,23 @@
         };
     </script>
 </head>
-<body ng-controller="AppCtrl" ng-cloak="">
-  <div class="app" id="app" ng-class="{'app-header-fixed':app.settings.headerFixed,'app-header-hidden':!app.settings.headerVisible, 'app-aside-fixed':app.settings.asideFixed, 'app-aside-hidden':!app.settings.asideVisible,'app-aside-folded':app.settings.asideFolded, 'app-aside-dock':app.settings.asideDock, 'container':app.settings.container,'container-wide':app.settings.wide}" ui-view></div>
+<body ng-controller="AppCtrl" ng-cloak="" style=" ">
+  <div
+
+          class="app"
+          id="app"
+          style="width:100%;height:100%"
+          ng-class="{
+            'app-header-fixed':app.settings.headerFixed,
+            'app-header-hidden':!app.settings.headerVisible,
+            'app-aside-fixed':app.settings.asideFixed,
+            'app-aside-hidden':!app.settings.asideVisible,
+            'app-aside-folded':app.settings.asideFolded,
+            'app-aside-dock':app.settings.asideDock,
+            'container':app.settings.container,
+            'container-wide':app.settings.wide}" ui-view>
+
+  </div>
   <!-- jQuery -->
   <script src="../libs/jquery/jquery/dist/jquery.js"></script>
   <script src="../libs/jquery/noui-slider/jquery.nouislider.all.min.js"></script>

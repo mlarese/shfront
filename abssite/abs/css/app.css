@@ -237,6 +237,7 @@ a:hover .caret-white {
 .list-group-item {
   padding-right: 15px;
   border-color: #e7ecee;
+  padding: 5px 15px;
 }
 
 a.list-group-item:hover,
@@ -5382,9 +5383,9 @@ h6, .h6 {
     font-size: 13px;
 }
 
-.dataTable_ .scroller {
-    white-space: pre-line;
-    height: 280px;
-    overflow-y: hidden;
-    position: relative;
+.mCSB_scrollTools_vertical .mCSB_dragger_bar{
+    left:6px  ;
 }
+.mCSB_scrollTools_horizontal .mCSB_dragger_bar{
+     top:6px  ;
+ }
