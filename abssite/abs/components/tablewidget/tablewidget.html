@@ -2,13 +2,13 @@
     <div class="panel-heading" style=" padding: 0 4px 10px;height:60px">
         <div class="clearfix">
             <a class="pull-left thumb-md avatar b-3x m-r" href="" ng-if="model.data.avatar">
-                <img alt="..." src="{{model.data.avatar}}?v=1.0.2"  style="opacity: 0.5;">
+                <img alt="..." ng-src="{{model.data.avatar}}?v=1.0.2"  style="opacity: 0.5;">
             </a>
             <div class="clear">
 
                 <div class="h5 m-t-md m-b-xs">
-                    <span class="text-muted-dark font-bold" ng-if="model.data.title">
-                        {{model.data.title|translate|uppercase}}
+                    <span class="text-muted-dark font-bold" ng-if="model.data.title" ng-bind="model.data.title|translate|uppercase">
+
                     </span>
                 </div>
                 <!-- small class="text-muted">{{'List'|translate}}</small -->
@@ -50,7 +50,7 @@
         </table>
 
     </div>
-    <div ng-init="
+    <div n-g-init="
         dispatch(
             model.data.onRowSelect,
             {

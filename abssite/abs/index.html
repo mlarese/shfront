@@ -40,14 +40,16 @@
                 ]
             }
         };
+
     </script>
 </head>
 <body ng-controller="AppCtrl" ng-cloak=""  class="modal-open">
   <div
-          customv-scrollbar=""
+
           class="app"
           id="app"
           style="width:100%;height:100%"
+          ng-cloak=""
           ng-class="{
             'app-header-fixed':app.settings.headerFixed,
             'app-header-hidden':!app.settings.headerVisible,

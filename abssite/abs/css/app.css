@@ -466,12 +466,12 @@ a.list-group-item.hover {
 }
 
 .panel-default {
-  border-color: #dee5e7;
+  border-color: #d1d1d1 !important;
 }
 
 .panel-default > .panel-heading,
 .panel-default > .panel-footer {
-  border-color: #edf1f2;
+  border-color: #d1d1d1;
 }
 
 .panel-group .panel-heading + .panel-collapse .panel-body {

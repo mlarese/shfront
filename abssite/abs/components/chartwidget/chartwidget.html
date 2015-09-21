@@ -1,5 +1,5 @@
 <div class="panel panel-default">
-    <div class="panel-heading font-bold">{{model.data.title|translate}}</div>
+    <div class="panel-heading font-bold" ng-bind="model.data.title|translate"></div>
     <div class="panel-body">
         <!----------------------
             Graph
@@ -27,7 +27,7 @@
                             <th style="width:80px;"></th>
                             <th
                                     style="width:1px;white-space: nowrap;width__:{{ lbl[1].length*9}}px;"
-                                    ng-repeat="lbl in model.values.labels">{{lbl[1]|translate}}
+                                    ng-repeat="lbl in model.values.labels"><span ng-bind="lbl[1]|translate"></span>
                             </th>
                             <th></th>
                         </tr>
@@ -37,7 +37,7 @@
                             <td  style="text-align:left" nowrap="nowrap">
                                 <div style="position:relative;top:5px;margin-right:5px;float:left;height:12px;width:12px;background:{{model.data.options.colors[$index]}}">
                                 </div>
-                                {{serie.label}}
+                                <span ng-bind="serie.label"></span>
                             </td>
                             <td align="right" ng-repeat="item in serie.data">{{item[1]| number:0}} {{model.data.unit}}</td>
                             <td></td>

@@ -8,12 +8,7 @@ angular.module('app')
                     theme:"minimal-dark",
                     axis:"yx",
                     scrollbarPosition:'outside' ,
-                    updateOnContentResize: true,
-                    callbacks:{
-                        onUpdate:function(){
-                            console.log("Scrollbars updated");
-                        }
-                    }
+                    updateOnContentResize: true
                 });
             }
         };
@@ -28,12 +23,7 @@ angular.module('app')
                     theme: "minimal-dark",
                     axis: "y",
                     scrollbarPosition: 'outside',
-                    updateOnContentResize: true,
-                    callbacks: {
-                        onUpdate: function () {
-                            console.log("Scrollbars updated");
-                        }
-                    }
+                    updateOnContentResize: true
                 });
             }
         }

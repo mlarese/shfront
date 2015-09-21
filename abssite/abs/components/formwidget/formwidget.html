@@ -2,7 +2,9 @@
 
     <div class="panel-heading pos-rlt b-b b-light">
 
-        <span class="text-muted-dark font-bold">{{model.data.title|translate|uppercase}}</span>
+        <span class="text-muted-dark font-bold" ng-bind="model.data.title|translate|uppercase">
+
+        </span>
 
     </div>
     <div ng-include="'be/'+model.data.template+'/form.html?v=1.0'"></div>

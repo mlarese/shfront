@@ -1,6 +1,6 @@
-<div class="panel  item padder" >
-    <div class="  text-info text-2x ">{{model.data.title|translate}}</div>
-    <span class="text-muted text-lg">{{model.data.text|translate}}</span>
+<div class="panel  item padder table-bordered"  >
+    <div class="  text-info text-2x " ng-bind="model.data.title|translate"></div>
+    <span class="text-muted text-lg" ng-bind="model.data.text|translate"></span>
     <div class="progress-sm m-t-sm bg-light progress ng-isolate-scope" type="primary" animate="true" value="60">
         <div
              ng-init="eventName='ev.widgets.reload' ;  eventParams={widgetId:model.data.id};   "
@@ -16,7 +16,7 @@
         </div>
     </div>
     <div  class="top text-right w-full text-info padder text-2x" >
-        {{model.values.value|number}} {{model.values.unit}}
+        <span ng-bind="model.values.value|number"></span> <span ng-bind="model.values.unit"></span>
     </div>
 
 </div>
