@@ -3,7 +3,7 @@
             "code": "reservationtodaydepartures",
             "type": "tablewidget",
             "structure":{
-               "avatar":"img/reservation.jpg",
+               "avatar":"img/departure.png",
                "bgClass":"bg-warning",
                "autoLoad":true,
                "title": "Today departures",
@@ -25,7 +25,7 @@
             "code": "reservationtodaydepartures",
             "type": "formwidget",
             "structure":{
-                "avatar":"img/reservation.jpg",
+                "avatar":"img/departure.png",
                 "bgClass":"bg-warning",
                 "autoLoad":false,
                 "template":"reservation",
@@ -43,7 +43,7 @@
         "code": "reservationtodayarrivals",
         "type": "tablewidget",
         "structure":{
-           "avatar":"img/reservation.jpg",
+           "avatar":"img/arrival.png",
            "bgClass":"bg-success",
            "autoLoad":true,
            "title": "Today arrivals",
@@ -65,7 +65,7 @@
         "code": "reservationtodayarrivals",
         "type": "formwidget",
         "structure":{
-            "avatar":"img/reservation.jpg",
+            "avatar":"img/arrival.png",
             "bgClass":"bg-success",
             "autoLoad":false,
             "template":"reservation",
@@ -82,7 +82,7 @@
         "code": "lastreservations",
         "type": "tablewidget",
         "structure":{
-           "avatar":"img/reservation.jpg",
+           "avatar":"img/reservation.png",
            "autoLoad":true,
            "title": "Last reservations",
            "height":"x1",
@@ -108,7 +108,7 @@
         "code": "lastreservation",
         "type": "formwidget",
         "structure":{
-            "avatar":"img/reservation.jpg",
+            "avatar":"img/reservation.png",
             "autoLoad":false,
             "template":"reservation",
             "title": "Reservation detail",

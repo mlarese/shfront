@@ -15,6 +15,8 @@ body {
   background-color: transparent;
 }
 
+body {padding-right:0px !important;overflow-y:hidden !important;}
+
 *:focus {
   outline: 0 !important;
 }
@@ -4794,6 +4796,9 @@ tr.row-selected{
   margin: 0;
 }
 
+.panel-heading .thumb-md {
+  width: 55px ;
+}
 .w-1x {
   width: 1em;
 }
@@ -5238,8 +5243,8 @@ tr.row-selected{
     color:white;
 }
 .avatar {
-  top: 8px !important;
-  right: 8px !important;
+  top: 2px !important;
+  right: 0 !important;
 }
 
 .navbar .navbar-brand {

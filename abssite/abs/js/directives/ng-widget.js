@@ -66,9 +66,9 @@ angular.module('app')
                         if(widget.structure.config.events["record.selected"]){
 
                             var listenTo = widget.structure.config.events["record.selected"];
-                            var onRecordSelect = function (env, record) {
-                                $scope.record = record;
-                                //$scope.dispatch(ACTIONS_EVENTS_PARA.EV_WIDGETS_RELOAD)
+
+                            var onRecordSelect = function (env, record,options) {
+                                $scope.__record = record;
                             }
 
                             $rootScope.$on('record.selected.'+ listenTo, onRecordSelect);

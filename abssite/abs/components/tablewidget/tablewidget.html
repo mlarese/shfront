@@ -1,13 +1,13 @@
-<div class="panel panel-default tablewidget" style="height:{{facilities.heightToPixel('x1')}}px">
-    <div class="panel-heading" style=" padding: 0 15px 10px;height:60px">
+<div class="panel panel-default tablewidget" style="height:{{facilities.heightToPixel('x1')}}px;width:100%">
+    <div class="panel-heading" style=" padding: 0 4px 10px;height:60px">
         <div class="clearfix">
-            <a class="pull-left thumb-md avatar b-3x m-r" href="">
-                <img alt="..." src="{{model.data.avatar}}?v=1.0.2"  >
+            <a class="pull-left thumb-md avatar b-3x m-r" href="" ng-if="model.data.avatar">
+                <img alt="..." src="{{model.data.avatar}}?v=1.0.2"  style="opacity: 0.5;">
             </a>
             <div class="clear">
 
                 <div class="h5 m-t-md m-b-xs">
-                    <span class="text-muted" ng-if="model.data.title">
+                    <span class="text-muted-dark font-bold" ng-if="model.data.title">
                         {{model.data.title|translate|uppercase}}
                     </span>
                 </div>
@@ -29,10 +29,10 @@
                 ng-init="item._rowindex=$index"
                 ng-click="
                     dispatch(model.data.onRowSelect,
-                        {source:model.data.broadcast,record:item}
+                        {source:model.data.broadcast,record:item,options:{row:item._rowindex}}
                     );
-                    model.data._curRow=$index;"
-                    ng-class="{'row-selected':(model.data._curRow==item._rowindex)}"
+                    model.data.__curRow=$index;"
+                    ng-class="{'row-selected':(model.data.__curRow==item._rowindex)}"
                     >
                 <td
                         ng-repeat="column in model.data.columns"
@@ -50,5 +50,15 @@
         </table>
 
     </div>
+    <div ng-init="
+        dispatch(
+            model.data.onRowSelect,
+            {
+                source:model.data.broadcast,
+                record:model.values.items[ model.data.__curRow=0 ],
+                options:{row:0}
+            }
+        );
 
+        "></div>
 </div>
