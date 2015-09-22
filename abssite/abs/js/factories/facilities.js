@@ -91,3 +91,4 @@ angular.module('facilities', [])
             return fn
         }
     ])
+
