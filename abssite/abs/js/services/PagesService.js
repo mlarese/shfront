@@ -8,7 +8,13 @@ var PagesService=function($resource,$cacheFactory,ENDPOINT_URI) {
         resource = $resource(
             endPoint+'/:id',
             { id:'@_id'},
-            {query:{ method: 'GET', isArray: false ,cache : $cacheFactory(endPoint) }}
+            {query:{
+                method: 'GET',
+                isArray: false ,
+                cache : $cacheFactory(endPoint),
+                transformResponse:function(){}
+
+            }}
         );
 
         angular.extend(this,new ServiceMixin(resource).mixin,{endPoint:endPoint,path:path,resource:resource} );
