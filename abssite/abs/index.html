@@ -20,9 +20,14 @@
     <link rel="stylesheet" href="css/admin.min.css" type="text/css" />
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script >
-        var tmpEndpointUri = '/shfront/abssite/abs/api';
-        //var tmpEndpointUri = '//shcore.mm-one.com.stg';
-        //var tmpEndpointUri = '//shcore.mm-one.com.local';
+        var endpoints = [
+            '/shfront/abssite/abs/api' ,
+            '//shcore.mm-one.com.stg',
+            '//shcore.mm-one.com.local'
+        ];
+
+        var tmpEndpointUri =  endpoints[1];
+
         //jndi
         var jndi ={
             provider:{},

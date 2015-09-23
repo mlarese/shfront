@@ -1,0 +1,51 @@
+{
+   "1":{
+      "id":"1",
+      "name":"Dashboard",
+      "iconurl":"glyphicon-signal",
+      "url":"",
+      "children":[
+         {
+            "id":"2",
+            "name":"Revenue by Rooms",
+            "iconurl":null,
+            "url":"/rooms",
+            "children":[
+
+            ],
+            "menutype":"CONTENT"
+         },
+         {
+            "id":"3",
+            "name":"Revenue by Pax",
+            "iconurl":null,
+            "url":"/pax",
+            "children":[
+
+            ],
+            "menutype":"CONTENT"
+         },
+         {
+            "id":"4",
+            "name":"Revenue",
+            "iconurl":null,
+            "url":"/revenue",
+            "children":[
+
+            ],
+            "menutype":"CONTENT"
+         }
+      ],
+      "menutype":"LABEL"
+   },
+   "5":{
+      "id":"5",
+      "name":"Single",
+      "iconurl":null,
+      "url":"/single",
+      "children":[
+
+      ],
+      "menutype":"CONTENT"
+   }
+}
