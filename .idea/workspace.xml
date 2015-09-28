@@ -5,19 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6a6a14e-5920-4b7b-99ee-026bc85a3733" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/services/ChartConfigService.js" afterPath="$PROJECT_DIR$/abssite/abs/js/services/ChartConfigService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/services/DataService.js" afterPath="$PROJECT_DIR$/abssite/abs/js/services/DataService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/services/MenuService.js" afterPath="$PROJECT_DIR$/abssite/abs/js/services/MenuService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/services/PagesService.js" afterPath="$PROJECT_DIR$/abssite/abs/js/services/PagesService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/services/WidgetsService.js" afterPath="$PROJECT_DIR$/abssite/abs/js/services/WidgetsService.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/css/app.css" afterPath="$PROJECT_DIR$/abssite/abs/css/app.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/config.router.js" afterPath="$PROJECT_DIR$/abssite/abs/js/config.router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/factories/facilities.js" afterPath="$PROJECT_DIR$/abssite/abs/js/factories/facilities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/js/main.js" afterPath="$PROJECT_DIR$/abssite/abs/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/api/platform/pages" afterPath="$PROJECT_DIR$/abssite/abs/api/platform/pages" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/shfront.iml" afterPath="$PROJECT_DIR$/.idea/shfront.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/abssite/abs/api/platform/widgets" afterPath="$PROJECT_DIR$/abssite/abs/api/platform/widgets" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="32a36120-e416-48db-9b79-98ae40d1de53" name="Failed commit: Default" comment="Upload di aggiornamento" />
@@ -73,6 +60,18 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/abssite/abs/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+              <folding>
+                <marker date="1443432324628" expanded="true" signature="2361:2800" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/abssite/abs/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PagesService.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PagesService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/abssite/abs/js/services/PagesService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.42585552">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -201,10 +200,10 @@
         <option value="$PROJECT_DIR$/zme/dot/model/buyers.model.js" />
         <option value="$PROJECT_DIR$/abssite/abs/api/platform/widgets" />
         <option value="$PROJECT_DIR$/abssite/abs/js/main.js" />
-        <option value="$PROJECT_DIR$/abssite/abs/index.html" />
         <option value="$PROJECT_DIR$/abssite/abs/js/services/ChartConfigService.js" />
         <option value="$PROJECT_DIR$/abssite/abs/js/config.router.js" />
         <option value="$PROJECT_DIR$/abssite/abs/js/services/PagesService.js" />
+        <option value="$PROJECT_DIR$/abssite/abs/index.html" />
       </list>
     </option>
   </component>
@@ -668,7 +667,13 @@
       <option name="project" value="LOCAL" />
       <updated>1442992878677</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Upload di aggiornamento">
+      <created>1443432247753</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1443432247753</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TodoView">
@@ -682,19 +687,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="5" y="0" width="1252" height="902" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22986577" sideWeight="0.50690335" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1878453" sideWeight="0.5048544" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25637585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.319337" sideWeight="0.49676377" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.49309665" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14789534" sideWeight="0.49514562" order="15" side_tool="false" content_ui="tabs" x="38" y="239" width="997" height="709" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22986577" sideWeight="0.50690335" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928804" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25637585" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.49309665" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11812298" sideWeight="0.49309665" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="eSnippet Pro" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -705,7 +711,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.23982398" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" x="1489" y="216" width="1083" height="726" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="FLOATING" visible="false" weight="0.30989012" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" x="1046" y="345" width="1144" height="567" />
@@ -1071,16 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/abssite/abs/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28742516">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
-          <folding>
-            <marker date="1443428099686" expanded="true" signature="-1:-1" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/abssite/abs/api/platform/widgets">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1126,9 +1121,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/abssite/abs/js/services/PagesService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42585552">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/abssite/abs/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="15" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
+          <folding>
+            <marker date="1443432324628" expanded="true" signature="2361:2800" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
