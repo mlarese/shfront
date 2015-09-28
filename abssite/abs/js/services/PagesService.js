@@ -1,4 +1,4 @@
-var PagesService=function($resource,$cacheFactory,ENDPOINT_URI) {
+var PagesService=function($rootScope,$resource,$cacheFactory,ENDPOINT_URI,extractDataFromRequestAuth) {
     var path='/platform/pages',
         endPoint= ENDPOINT_URI+path,
         /**
@@ -8,13 +8,7 @@ var PagesService=function($resource,$cacheFactory,ENDPOINT_URI) {
         resource = $resource(
             endPoint+'/:id',
             { id:'@_id'},
-            {query:{
-                method: 'GET',
-                isArray: false ,
-                cache : $cacheFactory(endPoint),
-                transformResponse:function(){}
-
-            }}
+            {query:{headers: { 'SH-LEGACY-TOKEN': $rootScope._authToken }, method: 'GET', isArray: false ,   cache : $cacheFactory(endPoint),  transformResponse:extractDataFromRequestAuth  }}
         );
 
         angular.extend(this,new ServiceMixin(resource).mixin,{endPoint:endPoint,path:path,resource:resource} );

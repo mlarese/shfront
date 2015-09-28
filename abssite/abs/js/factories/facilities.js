@@ -91,4 +91,22 @@ angular.module('facilities', [])
             return fn
         }
     ])
+    /*
+    *   Extract data from request.
+    *   Expectingt success and authentication attributes
+    * */
+    .factory('extractDataFromRequestAuth',function(){
+        // Todo authentication check
+        var extractDataFromRequest = function(response, headersGetter){
+            if(angular.isString( response ))
+                response = angular.fromJson(response);
+
+            if(response.data){
+                return response.data
+            }
+
+            return  response;
+        }
+        return extractDataFromRequest;
+    })
 

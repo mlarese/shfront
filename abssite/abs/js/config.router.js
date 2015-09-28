@@ -1,13 +1,16 @@
 'use strict';
 angular.module('app')
-  .run(function ($rootScope,   $state,   $stateParams) {
-          $rootScope.$state = $state;
-          $rootScope.$stateParams = $stateParams;
+  .run(function ($rootScope,   $state,   $stateParams,$location,$http) {
+
+        var params = $location.search();
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+        $rootScope._authToken = params._tk
   })
   .config( function (  $stateProvider,   $urlRouterProvider,   JQ_CONFIG,   MODULE_CONFIG  , APP_CONFIG , PG_CONFIG) {
+
           var layout = APP_CONFIG.router.appLayout ;
           $urlRouterProvider.otherwise(APP_CONFIG.router.startUrl);
-
 
           var load=function (srcs, callback) {
             return {

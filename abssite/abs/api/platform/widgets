@@ -1,43 +1,44 @@
 {
     "reservationtodaydepartures":{
-            "code": "reservationtodaydepartures",
-            "type": "tablewidget",
-            "structure":{
-               "avatar":"img/departure.png",
-               "bgClass":"bg-warning",
-               "autoLoad":true,
-               "title": "Today departures",
-               "height":300,
-               "titleIcon":"fa-plane",
-               "rowIcon":"fa-edit",
-               "broadcast":"today.departure.selected",
-               "onRowSelect":"record.selected",
-               "columns":[
-                    {"field":"reservation_surname","header":"Surname","width":100,"align":"left"}
-                    ,{"field":"reservation_name","header":"Name","width":100,"align":"left"}
-                    ,{"field":"reservation_channel","header":"Channel","width":100,"align":"left"}
-                    ,{"field":"reservation_room_type","header":"Room","width":90,"align":"left"}
-                    ,{"field":"reservation_note","header":"Note","width":120,"align":"left"}
-               ]
+        "code": "reservationtodaydepartures",
+        "type": "tablewidget",
+        "structure":{
+           "avatar":"img/departure.png",
+           "bgClass":"bg-warning",
+           "autoLoad":true,
+           "title": "Today departures",
+           "height":300,
+           "titleIcon":"fa-plane",
+           "rowIcon":"fa-edit",
+           "broadcast":"today.departure.selected",
+           "onRowSelect":"record.selected",
+           "columns":[
+                {"field":"reservation_surname","header":"Surname","width":100,"align":"left"}
+                ,{"field":"reservation_name","header":"Name","width":100,"align":"left"}
+                ,{"field":"reservation_channel","header":"Channel","width":100,"align":"left"}
+                ,{"field":"reservation_room_type","header":"Room","width":90,"align":"left"}
+                ,{"field":"reservation_note","header":"Note","width":120,"align":"left"}
+           ]
+        }
+    },
+
+    "reservationtodaydeparture":{
+        "code": "reservationtodaydepartures",
+        "type": "formwidget",
+        "structure":{
+            "avatar":"img/departure.png",
+            "bgClass":"bg-warning",
+            "autoLoad":false,
+            "template":"reservation",
+            "title": "Today departure detail",
+            "height":"x1",
+            "titleIcon":"fa-plane",
+            "config":{
+               "events":{ "record.selected":"today.departure.selected" }
             }
-        },
-        "reservationtodaydeparture":{
-            "code": "reservationtodaydepartures",
-            "type": "formwidget",
-            "structure":{
-                "avatar":"img/departure.png",
-                "bgClass":"bg-warning",
-                "autoLoad":false,
-                "template":"reservation",
-                "title": "Today departure detail",
-                "height":"x1",
-                "titleIcon":"fa-plane",
-                "config":{
-                   "events":{ "record.selected":"today.departure.selected" }
-                }
-            }
-    
-        },
+        }
+
+    },
     
     "reservationtodayarrivals":{
         "code": "reservationtodayarrivals",

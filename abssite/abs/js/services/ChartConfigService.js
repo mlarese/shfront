@@ -1,11 +1,11 @@
-var ChartConfigService= function ($resource,ENDPOINT_URI,$cacheFactory) {
+var ChartConfigService= function ($resource,ENDPOINT_URI,$cacheFactory,extractDataFromRequestAuth) {
     var path='/platform/widget/options',
         endPoint= ENDPOINT_URI+path,
         resource=$resource(
             endPoint+'/:id',
             { id:'@_id'},
             {
-                query:  { method: 'GET', isArray: false ,cache : $cacheFactory(endPoint) },
+                query:  { method: 'GET', isArray: false ,cache : $cacheFactory(endPoint),transformResponse:extractDataFromRequestAuth  },
                 update: { method: 'PUT' }
             }
         ) ;

@@ -9,6 +9,7 @@ var AppCtrl = function ( $rootScope,$state, $scope, $translate, $timeout, $local
     jndi.$fn.$dispatch = $commangular.dispatch;
     jndi.$rootScope = $rootScope;
 
+
     // config
     var app = {
         name: 'Abs hub',

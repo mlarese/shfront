@@ -3,5 +3,6 @@
   <component name="JavaScriptLibraryMappings">
     <file url="PROJECT" libraries="{angularjs-DefinitelyTyped, jasmine-DefinitelyTyped}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
+    <includedPredefinedLibrary name="Meteor project library" />
   </component>
 </project>

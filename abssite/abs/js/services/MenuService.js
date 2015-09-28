@@ -1,4 +1,4 @@
-var MenuService = function ($resource, ENDPOINT_URI,ENDPOINT_URI_ORIGIN, $cacheFactory) {
+var MenuService = function ($resource, ENDPOINT_URI,ENDPOINT_URI_ORIGIN, $cacheFactory,extractDataFromRequestAuth) {
     var path = '/platform/menuitems',
         endPoint = ENDPOINT_URI + path,
         queryDefParameters= (ENDPOINT_URI_ORIGIN=='file'?{id: '@_id',v:new Date().getTime()}:{id: '@_id'}),
@@ -6,7 +6,7 @@ var MenuService = function ($resource, ENDPOINT_URI,ENDPOINT_URI_ORIGIN, $cacheF
             endPoint + '/:id',
             queryDefParameters,
             {
-                query: {method: 'GET', isArray: false, cache: $cacheFactory(endPoint) },
+                query: {method: 'GET', isArray: false, cache: $cacheFactory(endPoint) ,transformResponse:extractDataFromRequestAuth },
                 update: {method: 'PUT'}
             }
         );

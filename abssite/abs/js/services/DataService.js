@@ -5,7 +5,7 @@
  * get
  * http://shcore.mm-one.com.stg/bi/filters
  */
-var DataService= function ($resource,ENDPOINT_URI,ENDPOINT_URI_ORIGIN,$cacheFactory) {
+var DataService= function ($resource,ENDPOINT_URI,ENDPOINT_URI_ORIGIN,$cacheFactory,extractDataFromRequestAuth) {
     var path='/bi/data/byname',
         endPoint= ENDPOINT_URI+path,
         /**
@@ -24,12 +24,16 @@ var DataService= function ($resource,ENDPOINT_URI,ENDPOINT_URI_ORIGIN,$cacheFact
         },
         resource;
 
+        var fn = function(response){
+            alert("")
+            return response
+        }
 
         resource=$resource(
             endPoint+'/:id?v=1.0.1',
             { id:'@_id'},
             {
-                query:{ method: 'GET', isArray: false ,cache : false },
+                query:{ method: 'GET', isArray: false ,cache : false ,transformResponse:fn },
                 update: { method: 'PUT' }
             }
         ) ;
