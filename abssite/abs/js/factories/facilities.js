@@ -110,3 +110,24 @@ angular.module('facilities', [])
         return extractDataFromRequest;
     })
 
+    .factory('delegate',function(){
+        var delegate =function(obj, args, appendArgs){
+            var method = this;
+            return function() {
+                var callArgs = args || arguments;
+                if (appendArgs === true){
+                    callArgs = Array.prototype.slice.call(arguments, 0);
+                    callArgs = callArgs.concat(args);
+                }else if (Ext.isNumber(appendArgs)){
+                    callArgs = Array.prototype.slice.call(arguments, 0);
+                    var applyArgs = [appendArgs, 0].concat(args);
+                    Array.prototype.splice.apply(callArgs, applyArgs);
+                }
+                return method.apply(obj || window, callArgs);
+            };
+        }
+
+
+        return delegate;
+    })
+

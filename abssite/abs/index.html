@@ -21,12 +21,13 @@
     <link rel="stylesheet" href="css/app.css" type="text/css" />
     <script >
         var endpoints = [
-            '/shfront/abssite/abs/api' ,
+            '/shfront/abssite/abs/api/index.php?' ,
             '//shcore.mm-one.com.stg',
             '//shcore.mm-one.com.local'
+
         ];
 
-        var tmpEndpointUri =  endpoints[1];
+        var tmpEndpointUri =  endpoints[0];
 
         //jndi
         var jndi ={
@@ -48,7 +49,9 @@
 
     </script>
 </head>
+
 <body ng-controller="AppCtrl" ng-cloak=""  class="modal-open">
+
   <div
 
           class="app"

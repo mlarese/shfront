@@ -10,7 +10,8 @@ angular.module('app')
   .config( function (  $stateProvider,   $urlRouterProvider,   JQ_CONFIG,   MODULE_CONFIG  , APP_CONFIG , PG_CONFIG) {
 
           var layout = APP_CONFIG.router.appLayout ;
-          $urlRouterProvider.otherwise(APP_CONFIG.router.startUrl);
+          //$urlRouterProvider.otherwise(APP_CONFIG.router.startUrl);
+          $urlRouterProvider.otherwise('/auth');
 
           var load=function (srcs, callback) {
             return {
@@ -66,6 +67,7 @@ angular.module('app')
               .state('app' ,   { url: '/app',       templateUrl: layout ,abstract: true  })
               .state('access', { url: '/access',    template: '<div ui-view class="fade-in-right-big smooth"></div>' })
               .state('access.login', defineLazyState('login','login',load,{}))
+              .state('auth', {url: '/auth',template: '<div  style="padding-left:40px"><h4>{{_authError}}</h4></div>' })
           ;
 
           jndi.provider.$urlRouterProvider=$urlRouterProvider;

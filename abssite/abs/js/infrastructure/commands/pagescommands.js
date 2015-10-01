@@ -31,7 +31,7 @@ commangular.command(ACTIONS_COMMANDS.COM_PAGES_ASSIGN_TO_SCOPE,function(PageSrv)
  *********************************************************/
 commangular.command(ACTIONS_COMMANDS.COM_PAGES_LOAD_ALL,function(PageSrv){
     return { execute:function($log) {
-
+        $log.info("PageSrv.loadAll.invoke")
         return PageSrv.loadAll();
     }}
 },{resultKey:'pages'})
@@ -39,5 +39,12 @@ commangular.command(ACTIONS_COMMANDS.COM_PAGES_LOAD_ALL,function(PageSrv){
 commangular.command(ACTIONS_COMMANDS.COM_ADD_ROUTER_STATES,function(StatusManagerService){
     return { execute:function(pages,menus) {
         StatusManagerService.setStates(pages,menus);
+    }}
+})
+
+commangular.command(ACTIONS_COMMANDS.COM_APP_AUTHENTICATION,function($log,AuthService){
+    return { execute:function() {
+        $log.info('AuthService.auth.invoke');
+        AuthService.auth();
     }}
 })

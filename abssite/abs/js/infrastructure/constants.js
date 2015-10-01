@@ -17,6 +17,7 @@ const ACTIONS_EVENTS_PARA = {
 
 const ACTIONS_COMMANDS = {
     COM_ALERT_BOX:'alert.box',
+    COM_APP_AUTHENTICATION:'app.authentication',
     COM_MENUS_LOAD_ALL:'menus.load.all',
     COM_PAGES_REGISTER : 'pages.register',
     COM_PAGES_ASSIGN_TO_SCOPE:'pages.assign.to.scope',

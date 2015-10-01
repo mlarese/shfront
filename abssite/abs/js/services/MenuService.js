@@ -6,7 +6,7 @@ var MenuService = function ($resource, ENDPOINT_URI,ENDPOINT_URI_ORIGIN, $cacheF
             endPoint + '/:id',
             queryDefParameters,
             {
-                query: {method: 'GET', isArray: false, cache: $cacheFactory(endPoint) ,transformResponse:extractDataFromRequestAuth },
+                query: {headers: { 'SH-LEGACY-TOKEN': $rootScope._authToken },method: 'GET', isArray: false, cache: $cacheFactory(endPoint) ,transformResponse:extractDataFromRequestAuth },
                 update: {method: 'PUT'}
             }
         );

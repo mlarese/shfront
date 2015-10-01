@@ -1,6 +1,10 @@
 // config
 
 angular.module('app')
+  .config(function ($httpProvider) {
+        //$httpProvider.defaults.withCredentials = true;
+        //delete $httpProvider.defaults.headers.common['X-Requested-With'];
+  })
   .config(function ($controllerProvider,   $compileProvider,   $filterProvider,   $provide) {
         app.controller = $controllerProvider.register;
         app.directive  = $compileProvider.directive;
@@ -21,9 +25,14 @@ angular.module('app')
             tmhDynamicLocaleProvider.localeLocationPattern('../libs/angular/i18n/angular-locale_{{locale}}.js');
 
   })
+  .run(['$http', '$cookies', function($rootScope,$http, $cookies) {
+        var result = '',length=32, chars='0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+        //$http.defaults.useXDomain = true;
+        $rootScope.__sessionId = result;
+  }])
   .run(function( tmhDynamicLocale){
-            tmhDynamicLocale.set('it');
-
+        tmhDynamicLocale.set('it');
   })
   .run(function( $rootScope ,$log,$timeout){
         var today=new Date(),

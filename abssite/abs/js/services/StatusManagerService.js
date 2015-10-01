@@ -82,7 +82,63 @@ var StatusManagerService = function($log){
         setStates:setStates
     };
     return  StatusManagerServiceImp
+};
+var AuthService= function ($rootScope,$resource,ENDPOINT_URI,$state,$timeout) {
+
+    var path='/platform/legacyauth/',
+        endPoint=  ENDPOINT_URI+path,
+        resource,
+        auth=function(response){
+            loadAll().then(function(response){
+
+                //console.dir(response)
+                response = angular.fromJson(response);
+console.log(response)
+
+                if(response.success===0){
+                    $rootScope._authToken=null;
+                    $rootScope._authError=response.message;
+                    return false;
+                }
+
+                $rootScope._authError="Ok";
+                $rootScope._authToken=response.authentication['token'];
+
+                $timeout(function(){
+                    $state.go('app.home')
+                },10)
+
+            })
+        },
+        loadAll= function () {
+            return resource.query().$promise.then(
+                function (response) {
+                    items = response.toJSON();
+                    return items;
+                },
+                function (error) {
+                    items = null;
+                    return error;
+                }
+            )
+        };
+
+    resource=$resource(
+        endPoint+'/:id',
+        { id:'@_id'},
+        {
+            query:{
+                method: 'GET',
+                isArray: false ,
+                cache : false ,
+                headers: { 'SH-LEGACY-TOKEN': $rootScope._authToken }
+            }
+        }
+    ) ;
+
+    angular.extend(this,{auth:auth} );
 }
 
 angular.module('app')
     .service('StatusManagerService', StatusManagerService)
+    .service('AuthService',AuthService)

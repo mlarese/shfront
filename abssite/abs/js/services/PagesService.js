@@ -14,5 +14,4 @@ var PagesService=function($rootScope,$resource,$cacheFactory,ENDPOINT_URI,extrac
         angular.extend(this,new ServiceMixin(resource).mixin,{endPoint:endPoint,path:path,resource:resource} );
 }
 
-angular.module('app')
-.service('PageSrv',PagesService)
+angular.module('app').service('PageSrv',PagesService)

@@ -25,7 +25,6 @@ var DataService= function ($resource,ENDPOINT_URI,ENDPOINT_URI_ORIGIN,$cacheFact
         resource;
 
         var fn = function(response){
-            alert("")
             return response
         }
 
@@ -41,6 +40,7 @@ var DataService= function ($resource,ENDPOINT_URI,ENDPOINT_URI_ORIGIN,$cacheFact
     angular.extend(this,new ServiceMixin(resource).mixin,{endPoint:endPoint,path:path,resource:resource ,load:load} );
 
 }
+
 
 var DataServiceTransform= function ($translate) {
     /************************************

@@ -1,7 +1,6 @@
 'use strict';
 app
-    .controller('HomeCtrl', function($scope , $localStorage , $log,  facilities,$state) {
-
+    .controller('HomeCtrl', function($rootScope ,$scope , $localStorage , $log,  facilities,$state) {
             var pageName='home',
                 dispatchMsg={
                     scope:$scope,
@@ -34,19 +33,17 @@ app
                 }
             }  ;
 
+
         $scope.dispatch(COM_PAGES_REGISTER ,dispatchMsg)
             .then(function(afterRegister) {
                 $log.info("loading page "+ pageSection);
-                $scope.dispatch(COM_PAGES_ASSIGN_TO_SCOPE, { 
+                $scope.dispatch(COM_PAGES_ASSIGN_TO_SCOPE, {
                     id: pageSection,
                     section: pageSection,
                     scope: $scope.app.pages.home,
                     attribute: '.'
                 })
             })
-
-
-
         }
     )
 ;

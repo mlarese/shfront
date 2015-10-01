@@ -1,5 +1,5 @@
 'use strict';
-var AppCtrl = function ( $rootScope,$state, $scope, $translate, $timeout, $localStorage, $window, facilities, $commangular) {
+var AppCtrl = function ($log, $rootScope,$state, $scope, $translate, $timeout, $localStorage, $window, facilities, $commangular) {
     var isIE = !!navigator.userAgent.match(/MSIE/i);
     isIE && angular.element($window.document.body).addClass('ie');
     isSmartDevice($window) && angular.element($window.document.body).addClass('smart');
@@ -72,9 +72,16 @@ var AppCtrl = function ( $rootScope,$state, $scope, $translate, $timeout, $local
         return (/iPhone|iPod|iPad|Silk|Android|BlackBerry|Opera Mini|IEMobile/).test(ua);
     }
 
+
+    $scope.dispatch(ACTIONS_COMMANDS.COM_APP_AUTHENTICATION).then(function (response) {
+        //console.dir(response)
+    })
+
+
+    /*
     $scope.dispatch(ACTIONS_COMMANDS.CHAIN_COM_LOAD_ROUTE).then(function (response) {
         $rootScope.sideMenu=response.menus;
-    })
+    })*/
 }
 
 angular.module('app')
@@ -82,4 +89,7 @@ angular.module('app')
     .constant('ENDPOINT_URI_ORIGIN', window.jndi.resource.ENDPOINT_URI_ORIGIN)
     .constant('JSON_FILES_VERSION', "1.0.2")
     .controller('AppCtrl',AppCtrl)
-    .controller('EmptyCtrl_',function($scope,$log){ $log.info("EmptyCtrl") }) ;
+    .controller('EmptyCtrl_',function($scope,$log){ $log.info("EmptyCtrl") })
+
+
+;
