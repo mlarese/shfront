@@ -1,5 +1,5 @@
 # shfront
 
-Servicehub client only
+Client with rest connections and components
 
 Angular 1.5
